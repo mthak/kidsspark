@@ -1,9 +1,83 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.8103520e-282a-40b4-8bc3-394dbdefe997",
       "was_cloned": false,
-      "merge": {}
+      "merge": {},
+      "in_skill_products": [
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/consumable/kidsspark.json",
+          "productId": "amzn1.adg.product.43e5df2b-48d5-42f1-9ead-f3f93e36a95e",
+          "eTag": "b437089d04819c440cb1134ef026e82c"
+        }
+      ],
+      "resources": {
+        "manifest": {
+          "eTag": "4547a1a427e521c4c05735beb156a11d"
+        },
+        "interactionModel": {
+          "de-DE": {
+            "eTag": "7f615ede3e7beb9f98e16adff3dd56af"
+          },
+          "en-AU": {
+            "eTag": "c71e9131ac39b8e4a83f30bdccf9c666"
+          },
+          "en-GB": {
+            "eTag": "9ad4cd6e92ded0eb6dc264104baa64eb"
+          },
+          "en-US": {
+            "eTag": "199995163740f2a9dc973085d14507fe"
+          },
+          "en-CA": {
+            "eTag": "a368cd8be8757d70161559ac470444b8"
+          },
+          "es-ES": {
+            "eTag": "af1aa1a001fa13411ad2a1137c863faa"
+          },
+          "es-US": {
+            "eTag": "8bea3cf40b976097d65f87c5fd73bdad"
+          },
+          "en-IN": {
+            "eTag": "076a59ef27cea6146a4b3f3855c1b9c9"
+          },
+          "fr-CA": {
+            "eTag": "a967b472973e9ad38f63c9954926608e"
+          },
+          "hi-IN": {
+            "eTag": "8dbf1be260678c525259d9253f722634"
+          },
+          "ja-JP": {
+            "eTag": "ee2b08c7913d36d7bc569d4a07a3ffff"
+          },
+          "es-MX": {
+            "eTag": "52620deada2648ee177f145997050ab1"
+          },
+          "it-IT": {
+            "eTag": "3c0a16d696141804fe7b400094b5ba7f"
+          },
+          "fr-FR": {
+            "eTag": "af0c04249aab939dfb78ed3938028c06"
+          },
+          "pt-BR": {
+            "eTag": "dd32f02be2b9c389d0c26a35c4624820"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:077818350833:function:ask-custom-kidsspark-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-custom-kidsspark-default",
+            "handler": "index.handler",
+            "revisionId": "505f3ace-b967-4616-9a68-0d118e504c11",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
     }
   }
 }

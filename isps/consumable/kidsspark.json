@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "type": "CONSUMABLE",
+  "referenceName": "surprise_pack",
+  "publishingInformation": {
+    "locales": {
+      "en-US": {
+        "name": "Kids Spark Surprise Pack",
+        "summary": "This is a surprize gift pack for your kid.",
+        "description": "When your kid accumulate five thousand points you can buy gift of appriciation for your child with 4.99 dollars.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy a gift",
+          "Alexa, buy gift",
+          "Alexa, purchase a gift"
+        ],
+        "keywords": [
+          "Surprise Gift",
+          "Kids Spark Surprise",
+          "Surprise Pack"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The gift pack will have few surprises.",
+          "boughtCardDescription": "Thanks for purchasing the surprise gift pack.  Your gift will arrive soon!"
+        }
+      }
+    },
+    "distributionCountries": [
+      "US"
+    ],
+    "pricing": {
+      "amazon.com": {
+        "releaseDate": "2019-11-11T00:00Z",
+        "defaultPriceListing": {
+          "price": 4.99,
+          "currency": "USD"
+        }
+      }
+    },
+    "taxInformation": {
+      "category": "SOFTWARE"
+    }
+  },
+  "privacyAndCompliance": {
+    "locales": {
+      "en-US": {
+        "privacyPolicyUrl": "https://localhost/privacy.html"
+      }
+    }
+  },
+  "testingInstructions": "TODO: REPLACE THIS WITH TESTING INSTRUCTIONS FOR THE CERTIFICATION TEAM SO THEY KNOW HOW TO PURCHASE AND USE THIS PRODUCT",
+  "purchasableState": "PURCHASABLE"
+}

@@ -3,62 +3,62 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open kids spark",
+            "ask kids spark",
+            "launch kids spark"
           ],
           "keywords": []
         },
         "en-GB": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open Kids Spark",
+            "ask kids spark",
+            "launch kids spark"
           ],
           "keywords": []
         },
         "en-CA": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open Kids Spark",
+            "ask kids spark",
+            "launch kids spark"
           ],
           "keywords": []
         },
         "en-IN": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open Kids Spark",
+            "ask kids spark",
+            "launch kids spark"
           ],
           "keywords": []
         },
         "en-AU": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open Kids Spark",
+            "ask kids spark",
+            "launch kids spark"
           ],
           "keywords": []
         },
         "es-ES": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -69,7 +69,7 @@
           "keywords": []
         },
         "es-MX": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -80,7 +80,7 @@
           "keywords": []
         },
         "es-US": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -91,7 +91,7 @@
           "keywords": []
         },
         "fr-FR": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -102,7 +102,7 @@
           "keywords": []
         },
         "fr-CA": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -113,7 +113,7 @@
           "keywords": []
         },
         "ja-JP": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -124,7 +124,7 @@
           "keywords": []
         },
         "de-DE": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -135,7 +135,7 @@
           "keywords": []
         },
         "it-IT": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -146,7 +146,7 @@
           "keywords": []
         },
         "hi-IN": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -157,7 +157,7 @@
           "keywords": []
         },
         "pt-BR": {
-          "name": "kidsspark",
+          "name": "Kids Spark",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [

@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hello world",
+            "invocationName": "kids spark",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,16 +16,86 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "QuizIntent",
                     "slots": [],
                     "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
+                        "start game",
+                        "let's begin",
+                        "begin",
+                        "start",
+                        "lets play",
+                        "start play",
+                        "play"
+                    ]
+                },
+                {
+                  "name": "AMAZON.YesIntent",
+                  "slots": [],
+                  "samples": [
+                      "yes",
+                      "yeah",
+                      "yup",
+                      "start new game",
+                      "play a new game",
+                      "start a new game",
+                      "begin a new game",
+                      "start game",
+                      "begin new game",
+                      "new game",
+                      "start over"
+                  ]
+                },
+                {
+                  "name": "ResumeIntent",
+                  "slots": [],
+                  "samples": [
+                      "previous game",
+                      "resume game",
+                      "start previous game",
+                      "previous game",
+                      "play old game"
+                
+                  ]
+                },
+                {
+                  "name": "AMAZON.NoIntent",
+                  "slots": [],
+                  "samples": [
+                      "no",
+                      "nope",
+                      "nah"
+                  ]
+                },
+                {
+                  "name": "AMAZON.StartOverIntent",
+                  "samples": []
+                },
+                {
+                    "name": "QuizAnswerIntent",
+                    "slots": [
+                        {
+                            "name": "phrase",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "answer is {phrase}",
+                        "I think {phrase}",
+                        "I would go for {phrase} ",
+                        "the correct answer is {phrase}",
+                        "correct answer is {phrase}",
+                        "a {phrase}",
+                        "the {phrase}",
+                        "the answer is {phrase}",
+                        "is it {phrase}",
+                        "it is {phrase}",
+                        "it was {phrase}",
+                        "it might be {phrase}",
+                        "i think it is {phrase}",
+                        "i think it was {phrase}",
+                        "i think it might be {phrase}",
+                        "i think the answer is {phrase}",
+                        "i think the answer might be {phrase}"
                     ]
                 },
                 {
@@ -35,9 +105,71 @@
                 {
                     "name": "AMAZON.FallbackIntent",
                     "samples": []
-                }
+                },
+                {
+                    "name": "WhatCanIBuyIntent",
+                    "samples": [
+                      "what can I buy",
+                      "what can I shop for",
+                      "tell me what I can buy",
+                      "buy",
+                      "shop",
+                      "purchase"        
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "BuyIntent",
+                    "samples": [
+                      "buy {ProductName}",
+                      "purchase {ProductName}",
+                      "want {ProductName}",
+                      "would like {ProductName}",
+                      "buy {ProductName} pack",
+                      "purchase {ProductName} pack",
+                      "want {ProductName} pack",
+                      "would like {ProductName} pack"
+                    ],
+                    "slots": [
+                      {
+                        "name": "ProductName",
+                        "type": "LIST_OF_PRODUCT_NAMES"
+                      }
+                    ]
+                },
+                {
+                    "name": "CancelPurchaseIntent",
+                    "slots": [],
+                    "samples": [
+                        "cancel my purchase",
+                        "cancel purchase",
+                        "return my purchase",
+                        "return purchase",
+                        "refund my purchase",
+                        "refund purchase",
+                        "refund my transaction",
+                        "refund transaction",
+                        "cancel transaction",
+                        "cancel my transaction"
+                    ]
+                } 
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "LIST_OF_PRODUCT_NAMES",
+                    "values": [
+                      {
+                        "id": "reference_name",
+                        "name": {
+                          "value": "Surprise Pack",
+                          "synonyms": [
+                            "A surprise"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+            ]
         }
     }
 }

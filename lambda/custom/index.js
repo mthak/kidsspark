@@ -163,6 +163,7 @@ function generatePresentableQuestion(questions) {
         console.info("generatePresentableQuestion: inside for loop ");
         console.info(questions[i].isQuestionAsked == undefined);
         if(questions[i].isQuestionAsked == undefined || questions[i].isQuestionAsked == false) {
+            console.info("generatePresentableQuestion: inside for loop ");
             currentQuestion = questions[i];
             break;
         }

@@ -9,7 +9,7 @@
           "deploy_status": "Update",
           "filePath": "isps/consumable/kidsspark.json",
           "productId": "amzn1.adg.product.43e5df2b-48d5-42f1-9ead-f3f93e36a95e",
-          "eTag": "b437089d04819c440cb1134ef026e82c"
+          "eTag": "2197ad798b6575ea597213c323ff4944"
         }
       ],
       "resources": {
@@ -18,49 +18,49 @@
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "7f615ede3e7beb9f98e16adff3dd56af"
+            "eTag": "87abfcbb82527fb5d81744b4644c82b9"
           },
           "en-AU": {
-            "eTag": "c71e9131ac39b8e4a83f30bdccf9c666"
+            "eTag": "e4461020088c6755133918b6edc41085"
           },
           "en-GB": {
-            "eTag": "9ad4cd6e92ded0eb6dc264104baa64eb"
+            "eTag": "3fbf786fb3e9b618d37fe6a5e0b3d35b"
           },
           "en-US": {
-            "eTag": "199995163740f2a9dc973085d14507fe"
+            "eTag": "8570d0f96cb4ff3ad0b9da2f80865744"
           },
           "en-CA": {
-            "eTag": "a368cd8be8757d70161559ac470444b8"
+            "eTag": "8151bebc04a0fe16825c79b488ac73ca"
           },
           "es-ES": {
-            "eTag": "af1aa1a001fa13411ad2a1137c863faa"
+            "eTag": "d78830e251942b52bdc6f2974952f530"
           },
           "es-US": {
-            "eTag": "8bea3cf40b976097d65f87c5fd73bdad"
+            "eTag": "18513d75bab499f5e4f5cfc2ee3c45ee"
           },
           "en-IN": {
-            "eTag": "076a59ef27cea6146a4b3f3855c1b9c9"
+            "eTag": "8275ea46ed3c0c58ee963a1d44901428"
           },
           "fr-CA": {
-            "eTag": "a967b472973e9ad38f63c9954926608e"
+            "eTag": "8f2d9a0f7b84fa46855251c21e0ebdec"
           },
           "hi-IN": {
-            "eTag": "8dbf1be260678c525259d9253f722634"
+            "eTag": "baf0bec3c6d52de5af6c51a3a95e931b"
           },
           "ja-JP": {
-            "eTag": "ee2b08c7913d36d7bc569d4a07a3ffff"
+            "eTag": "10c15d638e897a62b1d68c7b2f84a9ad"
           },
           "es-MX": {
-            "eTag": "52620deada2648ee177f145997050ab1"
+            "eTag": "13139adc4d1e0a9a08c549540afe473f"
           },
           "it-IT": {
-            "eTag": "3c0a16d696141804fe7b400094b5ba7f"
+            "eTag": "9ef1a82d8fac865641c5028e3fe05253"
           },
           "fr-FR": {
-            "eTag": "af0c04249aab939dfb78ed3938028c06"
+            "eTag": "7e80b7980e8d7f4a257c3ebcb111e2b9"
           },
           "pt-BR": {
-            "eTag": "dd32f02be2b9c389d0c26a35c4624820"
+            "eTag": "57c6f82ea9433f375835025260250c8a"
           }
         },
         "lambda": [
@@ -73,7 +73,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "505f3ace-b967-4616-9a68-0d118e504c11",
+            "revisionId": "423779af-ced5-48fc-a990-0164806c0478",
             "runtime": "nodejs8.10"
           }
         ]

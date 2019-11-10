@@ -32,17 +32,13 @@ const LaunchRequestHandler = {
         if (sessionAttributes.state == states.QUIZ) {
             //TODO Welcome back
             return handlerInput.responseBuilder
-                .speak(`Welcome back to Kids Spark. To start a new game you can say 'start game',` +
-                  ' or to hear about the premium categories for purchase, say \'What can I buy\'. ' +
-                  ' For help, say , \'Help me\'... So, What can I help you with?')
-                .reprompt('I didn\'t catch that. What can I help you with?')
+                .speak(handlerInput.t('WELCOME_MSG'))
+                .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
                 .getResponse();
         } else {
             return handlerInput.responseBuilder
-                .speak(`Welcome to Kids Spark. To resume your previous game say 'resume game',` +
-                  ' or to start a new game, say \'Start Game\'. ' +
-                  ' For help, say , \'Help me\'... So, What can I help you with?')
-                .reprompt('I didn\'t catch that. What can I help you with?')
+                .speak(handlerInput.t('WELCOME_BACK_MSG'))
+                .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
                 .getResponse();
         }
     }
@@ -68,11 +64,157 @@ const ResumeHandler = {
         console.log('ResumeHandler: canHandle');
         const { request } = handlerInput.requestEnvelope;
         return request.type === 'IntentRequest' && 
-            (request.intent.name === 'AMAZON.YesIntent' || request.intent.name === 'ResumeIntent');
+            (request.intent.name === 'ResumeIntent');
     },
     handle(handlerInput) {
         console.log("ResumeHandler: handle");
         QuizHandler.handle(handlerInput);
+    },
+};
+
+const FiftyFiftyHandler = {
+    canHandle(handlerInput) {
+        console.log('FiftyFiftyHandler: canHandle');
+        const { request } = handlerInput.requestEnvelope;
+        return request.type === 'IntentRequest' && 
+            (request.intent.name === 'FiftyFiftyIntent');
+    },
+    handle(handlerInput) {
+        console.log("FiftyFiftyHandler: handle");
+        var speakOutput = null;
+        var repromt = null;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let response = handlerInput.responseBuilder;
+        if (sessionAttributes.state == states.INPROGRESS) {
+            
+            if(!sessionAttributes.fiftyFityUsed) {
+                speakOutput = handlerInput.t('FIFTY_FITY_MSG') + sessionAttributes.currentQuestion.help;
+                repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
+                sessionAttributes.fiftyFityUsed = true;
+
+            } else {
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "});
+                repromt = handlerInput.t('LIFE_LINES_SATUS');
+            }
+
+        } else {
+            speakOutput = handlerInput.t('LIFE_LINE_ERROR_MSG');
+            repromt = handlerInput.t('START_GAME_MSG');
+        }
+        return response.speak(speakOutput)
+                     .reprompt(repromt)
+                     .withShouldEndSession(false)
+                     .getResponse();
+    },
+};
+
+const ExpertReviewHandler = {
+    canHandle(handlerInput) {
+        console.log('ExpertReviewHandler: canHandle');
+        const { request } = handlerInput.requestEnvelope;
+        return request.type === 'IntentRequest' && 
+            (request.intent.name === 'ExpertReviewIntent');
+    },
+    handle(handlerInput) {
+        console.log("ExpertReviewHandler: handle");
+        var speakOutput = null;
+        var repromt = null;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let response = handlerInput.responseBuilder;
+        if (sessionAttributes.state == states.INPROGRESS) {
+
+            if (!sessionAttributes.expertReviewUsed) {
+                speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.help;
+                repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
+                sessionAttributes.expertReviewUsed = true;
+            } else {
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Expert Review "});
+                repromt = handlerInput.t('LIFE_LINES_SATUS');
+            }
+
+        } else {
+            speakOutput = handlerInput.t('LIFE_LINE_ERROR_MSG');
+            repromt = handlerInput.t('START_GAME_MSG');
+        }
+        return response.speak(speakOutput)
+                     .reprompt(repromt)
+                     .withShouldEndSession(false)
+                     .getResponse();
+    },
+};
+
+const ScoreHandler = {
+    canHandle(handlerInput) {
+        console.log('ScoreHandler: canHandle');
+        const { request } = handlerInput.requestEnvelope;
+        return request.type === 'IntentRequest' && 
+            (request.intent.name === 'ScoreIntent');
+    },
+    handle(handlerInput) {
+        console.log("ScoreHandler: handle");
+        var speakOutput = null;
+        var repromt = null;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let response = handlerInput.responseBuilder;
+        let response = handlerInput.responseBuilder;
+        if (sessionAttributes.state == states.INPROGRESS) {
+
+            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
+
+        } else {
+            speakOutput = handlerInput.t('CURRENT_SCORE_ERROR');
+            repromt = handlerInput.t('START_GAME_MSG');
+        }
+        return response.speak(speakOutput)
+                     .reprompt(repromt)
+                     .withShouldEndSession(false)
+                     .getResponse();
+    },
+};
+
+const LifeLineHandler = {
+    canHandle(handlerInput) {
+        console.log('LifeLineHandler: canHandle');
+        const { request } = handlerInput.requestEnvelope;
+        return request.type === 'IntentRequest' && request.intent.name === 'LifeLineIntent';
+    },
+    handle(handlerInput) {
+        console.log("LifeLineHandler: handle");
+        var speakOutput = null;
+        var repromt = null;
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let response = handlerInput.responseBuilder;
+        if (sessionAttributes.state == states.INPROGRESS) {
+            speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.help;
+            var lifeLinesLeft = "";
+            if(sessionAttributes.fiftyFityUsed === false)
+                lifeLinesLeft = " fifty ffity, " + lifeLinesLeft;
+            if(sessionAttributes.expertReviewUsed === false)
+                lifeLinesLeft = " expert review, " + lifeLinesLeft;
+            if(sessionAttributes.glideOptionUsed === false)
+                lifeLinesLeft = " glide option, " + lifeLinesLeft;
+
+            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
+
+            //TODO case in which all life line are used
+            // if(sessionAttributes.fiftyFityUsed && sessionAttributes.expertReviewUsed && sessionAttributes.glideOptionUsed) {
+            //     speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            //     repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
+                
+            // }
+
+            
+        } else {
+            console.log("LifeLineHandler: ELSE");
+            speakOutput = handlerInput.t('LIFE_LINE_ERROR_MSG');
+            repromt = handlerInput.t('START_GAME_MSG');
+        }
+        return response.speak(speakOutput)
+                     .reprompt(repromt)
+                     .withShouldEndSession(false)
+                     .getResponse();
     },
 };
 
@@ -93,11 +235,15 @@ const QuizHandler = {
       if (sessionAttributes.state === states.START) {
             questions = await fetchAllQuestions();
             console.error("*****************GOT QUESTIONS ***************** ");
-            //Putting all questions in the session for storage
+            //Resetting every field as this is the start of new game
             sessionAttributes.gameQuestions = questions;
+            sessionAttributes.fiftyFityUsed = false;
+            sessionAttributes.expertReviewUsed = false;
+            sessionAttributes.glideOptionUsed = false;
+            sessionAttributes.quizScore = 0;
             console.error("*****************ADDED QUESTIONS IN SESSION***************** ");
         } else if (sessionAttributes.gameQuestions != null) {
-            questions = sessionAttributes.gameQuestions.questionList
+            questions = sessionAttributes.gameQuestions
             console.error("*****************FETCHING QUESTIONS FROM SESSION***************** ");
        }
 
@@ -109,15 +255,13 @@ const QuizHandler = {
 
       } else {
         console.error("*****************GENERATING PRESENTABLE QUESTIONS***************** ");
-        const [askQuestion, askAgain, currentQuestion] = generatePresentableQuestion(questions);
-        const speakOutput = handlerInput.t('START_QUIZ_MESSAGE') + askQuestion;
-        if (sessionAttributes.state === states.QUIZ) {
-            speakOutput =  handlerInput.t('QUESTIONS_ANSWERED_CORRECTLY') + handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('NEXT_QUESTION') + + askQuestion;
-        }
+        const [askQuestion, askAgain, currentQuestion] = generatePresentableQuestion(questions, handlerInput);
+        const speakOutput = askQuestion;
 
         sessionAttributes.currentQuestion = currentQuestion;
         return response.speak(speakOutput)
                      .reprompt(askAgain)
+                     .withShouldEndSession(false)
                      .getResponse();
       }
     },
@@ -132,60 +276,92 @@ const QuizResponseHandler = {
         return request.type === "IntentRequest" && (request.intent.name === "QuizAnswerIntent");
     }, 
     async handle(handlerInput) {
-        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        const currentQuestion = sessionAttributes.currentQuestion;
+        var sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        var currentQuestion = sessionAttributes.currentQuestion;
         const response = handlerInput.responseBuilder;
         var speakOutput = null;
+        var repeatOutput = null;
         const phrase = handlerInput.requestEnvelope.request.intent.slots.phrase.value;
-        if(currentQuestion === null || currentQuestion === undefined ) {
+        
+        if(currentQuestion == undefined || currentQuestion == null) {
             speakOutput =  handlerInput.t('ERROR_QUESTION_FETCH');
 
         } else if (phrase.includes(currentQuestion.answer)) {
-            sessionAttributes.state = states.QUIZ;
+            console.log("QuizResponseHandler ANSWER is CORRECT");
+            
+            console.log("currentQuestion.points "  + JSON.stringify(sessionAttributes));
+            sessionAttributes.state = states.INPROGRESS;
             sessionAttributes.quizScore = sessionAttributes.quizScore + currentQuestion.points;
+            
             //TODO add isQuestionAsked to notify that question was true
-            QuizHandler.handle(handlerInput);
+            console.log("QuizResponseHandler ASKING AGAIN");
+            sessionAttributes = markQuestionCompleted(sessionAttributes.currentQuestion.id, sessionAttributes, true);
+            const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
+			
+            speakOutput =  handlerInput.t('QUESTIONS_ANSWERED_CORRECTLY') + handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('NEXT_QUESTION') + askQuestion;
+            
+            sessionAttributes.currentQuestion = newCurrentQuestion;
+            repeatOutput = askAgain;
+            console.log("QuizResponseHandler ASKING AGAIN GOT QUESTIONS");
+            
         } else {
-            sessionAttributes.state = states.QUIZ;
+            sessionAttributes = markQuestionCompleted(sessionAttributes.currentQuestion.id, sessionAttributes, false);
+            sessionAttributes.state = states.INPROGRESS;
+            if (sessionAttributes.glideOptionUsed) {	
+                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_JUMP');
+            } else {
+                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + + handlerInput.t('QUESTIONS_CANNOT_JUMP');
+            }
+            repeatOutput = handlerInput.t('QUESTIONS_REPROMPT_MSG');
+            //TODO get the buy content here
         }
 
         return response.speak(speakOutput)
+			         .reprompt(repeatOutput)
+        			 .withShouldEndSession(false)
                      .getResponse();
     }
 }
 
-function generatePresentableQuestion(questions) {
+function markQuestionCompleted(questionDone, sessionAttributes, isAnswerCorrect) {
+    for (var i = 0; i < sessionAttributes.gameQuestions.length; i++) {
+        console.info("markQuestionCompleted: inside for loop ");
+        if(sessionAttributes.gameQuestions[i].id === questionDone) {
+            console.info("markQuestionCompleted: marking done ");
+            sessionAttributes.gameQuestions[i].isQuestionAsked = true;
+            sessionAttributes.gameQuestions[i].isAnswerCorrect = isAnswerCorrect;
+            break;
+        }
+    }
+    return sessionAttributes;
+}
+
+function generatePresentableQuestion(questions, handlerInput) {
 
     console.info("generatePresentableQuestion: processing ");
     var currentQuestion = null;
-    try {
+
     for (var i = 0; i < questions.length; i++) {
         console.info("generatePresentableQuestion: inside for loop ");
-        console.info(questions[i].isQuestionAsked == undefined);
+        console.info(questions[i].isQuestionAsked == undefined || questions[i].isQuestionAsked == false);
         if(questions[i].isQuestionAsked == undefined || questions[i].isQuestionAsked == false) {
             console.info("generatePresentableQuestion: inside for loop ");
             currentQuestion = questions[i];
             break;
         }
     }
-    } catch (error) {
-        console.info("generatePresentableQuestion: in the for loop ");
-        console.info(error);
-    }
+  	console.info("generatePresentableQuestion: currentQuestion");
+  	console.info(JSON.stringify(currentQuestion));
     var conversationString = handlerInput.t('ERROR_QUESTION_FETCH');
-    console.info("generatePresentableQuestion: counting questions");
-    if(currentQuestion.length === 1) {
-        const unansweredQuestions = _countBy(questions, o => (o.isQuestionAsked === undefined || o.isQuestionAsked === false)).true
-        const easyQuestions = _.countBy(unansweredQuestions, o => o.points < 3).true
-        const mediumQuestions  = _.countBy(unansweredQuestions, o => 2 < o.points < 7).true
-        const hardQuestions  = _.countBy(unansweredQuestions, o => 6 < o.points < 15).true
-        console.info("easyQuestions: " + easyQuestions + " easyQuestions: " + mediumQuestions + " hardQuestions: " + hardQuestions);
     
-        const questionBegin = "You have " + easyQuestions + " easy questions, " + mediumQuestions + " medium questions " + hardQuestions + " hard questions left. Here is your question coming up now. "
+    if(currentQuestion != null) {
+    	console.info("generatePresentableQuestion: counting questions");
+        const questionBegin = " Here is your question coming up now.  "; //"You have " + easyQuestions + " easy questions, " + mediumQuestions + " medium questions " + hardQuestions + " hard questions left. Here is your question coming up now. "
         //TODO Translate
         return  [questionBegin + currentQuestion.ques, currentQuestion.ques, currentQuestion];
-    } else if (currentQuestion.length === 0) {
+    } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
+        sessionAttributes.currentQuestion = null;
     }
     
     return [conversationString, conversationString, currentQuestion];
@@ -208,7 +384,7 @@ async function fetchAllQuestions() {
     return fetchedQuestion;
 }
 
-const BuyHintHandler = {
+const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name === 'BuyHintIntent';
@@ -222,10 +398,20 @@ const BuyHintHandler = {
         persistentAttributes.currentSession = sessionAttributes;
         handlerInput.attributesManager.savePersistentAttributes();
 
+        if(sessionAttributes.glideOptionUsed) {
+            let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "});
+            let repromt = handlerInput.t('LIFE_LINES_SATUS');
+            return response.speak(speakOutput)
+                     .reprompt(repromt)
+                     .withShouldEndSession(false)
+                     .getResponse();
+        }
+
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
 
         return ms.getInSkillProducts(handlerInput.requestEnvelope.request.locale).then((res) => {
-            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'surprise_pack');
+            
+            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'glide');
             if (hintpack.length < 10 && hintpack[0].purchasable === 'PURCHASABLE') {
                 return handlerInput.responseBuilder
                     .addDirective({
@@ -251,7 +437,7 @@ const BuyHintHandler = {
     },
 };
 
-const CancelPurchaseHandler = {
+const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name === 'CancelPurchaseIntent';
@@ -269,7 +455,8 @@ const CancelPurchaseHandler = {
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
 
         return ms.getInSkillProducts(handlerInput.requestEnvelope.request.locale).then((res) => {
-            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'surprise_pack');
+            
+            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'glide');
             if (hintpack.length < 5 && hintpack[0].purchasable === 'PURCHASABLE') {
                 return handlerInput.responseBuilder
                     .addDirective({
@@ -288,6 +475,48 @@ const CancelPurchaseHandler = {
                 .speak(handlerInput.t('CANNOT_CANCEL_RIGHT_NOW'))
                 .getResponse();
         });
+    },
+};
+
+const BuyHintResponseHandler = {
+    canHandle(handlerInput) {
+        console.log("Inside BuyHintResponseHandler");
+        console.log(handlerInput.requestEnvelope.request.type === 'Connections.Response' &&
+            (handlerInput.requestEnvelope.request.name === 'Upsell' ||
+                handlerInput.requestEnvelope.request.name === 'Buy'));
+        return handlerInput.requestEnvelope.request.type === 'Connections.Response' &&
+            (handlerInput.requestEnvelope.request.name === 'Upsell' ||
+                handlerInput.requestEnvelope.request.name === 'Buy');
+    },
+    async handle(handlerInput) {
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        console.log(`SESSION ATTRIBUTES AFTER= ${JSON.stringify(sessionAttributes)}`);
+
+        let speakOutput = '';
+        let repeatOutput = '';
+
+        // IF THE USER DECLINED THE PURCHASE.
+        if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'DECLINED') {
+            speakOutput = '<voice name="Brian"><lang xml:lang="en-GB">Sorry glide was not purchased. </lang></voice>';
+            repeatOutput =  handlerInput.t('START_GAME_MSG');
+        } else if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ACCEPTED') {
+            
+            sessionAttributes.glideOptionUsed = true;
+            const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
+            sessionAttributes.currentQuestion = newCurrentQuestion;
+            speakOutput = '<voice name="Brian"><lang xml:lang="en-GB">Thanks for buying glide life line . ' + askQuestion +  '</lang></voice>';
+            repeatOutput = askAgain;
+        } else if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ERROR') {
+            // IF SOMETHING ELSE WENT WRONG WITH THE PURCHASE.
+            speakOutput = '<voice name="Brian"><lang xml:lang="en-GB">It looks like we are unable to sell hints right now.  Sorry.  Maybe you\'ll get it this time anyways. Are you ready for a question?</lang></voice>';
+            repeatOutput =  handlerInput.t('START_GAME_MSG');
+        }
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repeatOutput)
+            .withShouldEndSession(false)
+            .getResponse();
     },
 };
 
@@ -312,11 +541,13 @@ const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && (Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.CancelIntent'
-                || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
+                || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent'
+                || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.NoIntent');
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('GOODBYE_MSG');
-
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+		sessionAttributes.state = states.QUIZ
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
@@ -351,9 +582,11 @@ const SessionEndedRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'SessionEndedRequest';
     },
     handle(handlerInput) {
+    	const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    	sessionAttributes.state = states.QUIZ;
         console.log(`~~~~ Session ended: ${JSON.stringify(handlerInput.requestEnvelope)}`);
         // Any cleanup logic goes here.
-        return handlerInput.responseBuilder.getResponse(); // notice we send an empty response
+        return handlerInput.responseBuilder.speak("Closing out session please try starting skill again").getResponse(); // notice we send an empty response
     }
 };
 /* *
@@ -505,9 +738,14 @@ exports.handler = Alexa.SkillBuilders.standard()
         QuizHandler,
         QuizResponseHandler,
         YesHandler,
+        FiftyFiftyHandler,
+        ExpertReviewHandler,
+        ScoreHandler,
+        LifeLineHandler,
         ResumeHandler,
         BuyHintHandler,
         CancelPurchaseHandler,
+        BuyHintResponseHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

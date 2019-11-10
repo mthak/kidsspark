@@ -1,15 +1,15 @@
 {
   "version": "1.0",
   "type": "CONSUMABLE",
-  "referenceName": "surprise_pack",
+  "referenceName": "glide",
   "publishingInformation": {
     "locales": {
       "en-US": {
         "name": "Kids Spark Surprise Pack",
         "summary": "This is a surprize gift pack for your kid.",
         "description": "When your kid accumulate five thousand points you can buy gift of appriciation for your child with 4.99 dollars.",
-        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
-        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T153109Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6dc37081f300215fdec28ec4e6f354badc3d0beb822714dde923a9135aceb208",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T153109Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=52ea161908861726cd1117b3389be9033e8a3ded44e0907122752ccccddbaf23",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",
@@ -33,7 +33,7 @@
       "amazon.com": {
         "releaseDate": "2019-11-11T00:00Z",
         "defaultPriceListing": {
-          "price": 4.99,
+          "price": 0.99,
           "currency": "USD"
         }
       }

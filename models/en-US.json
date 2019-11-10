@@ -29,6 +29,65 @@
                     ]
                 },
                 {
+                    "name": "LifeLineIntent",
+                    "slots": [],
+                    "samples": [
+                        "life line",
+                        "life lines",
+                        "my life lines",
+                        "my life line",
+                        "what are my life lines",
+                        "how many life lines left",
+                        "life line status",
+                        "my life line status",
+                        "tell me about my life lines",
+                        "tell more about life lines",
+                        "tell more about the life lines"
+                    ]
+                },
+                {
+                    "name": "FiftyFiftyIntent",
+                    "slots": [],
+                    "samples": [
+                        "use Fifty Fifty life line",
+                        "use first life line",
+                        "use right wrong life line",
+                        "Ok Fifty Fifty life line",
+                        "ok Fifty Fifty",
+                        "Fifty Fifty",
+                        "I want to use Fifty Fifty life line",
+                        "I want to use first life line",
+                        "I want to use Fifty Fifty",
+                        "I will go for Fifty Fifty life line",
+                        "I will go for first life line",
+                        "I will go for Fifty Fifty",
+                        "I would go for Fifty Fifty life line",
+                        "I would go for first life line",
+                        "I would go for Fifty Fifty"
+                    ]
+                },
+                {
+                    "name": "ExpertReviewIntent",
+                    "slots": [],
+                    "samples": [
+                        "use Expert Review line",
+                        "use second life line",
+                        "use review life line",
+                        "use Expert life line",
+                        "ok Expert Review",
+                        "Expert Review",
+                        "I want to use Expert Review life line",
+                        "I want to use second life line",
+                        "I want to use Expert Review",
+                        "I will go for Expert Review life line",
+                        "I will go for second life line",
+                        "I will go for Expert Review",
+                        "I would go for Expert Review life line",
+                        "I would go for second life line",
+                        "I would go for Expert Review"
+                    ]
+                },
+                {
                   "name": "AMAZON.YesIntent",
                   "slots": [],
                   "samples": [
@@ -37,12 +96,12 @@
                       "yup",
                       "start new game",
                       "play a new game",
+                      "play new game",
                       "start a new game",
                       "begin a new game",
                       "start game",
                       "begin new game",
-                      "new game",
-                      "start over"
+                      "new game"
                   ]
                 },
                 {
@@ -55,15 +114,6 @@
                       "previous game",
                       "play old game"
                 
-                  ]
-                },
-                {
-                  "name": "AMAZON.NoIntent",
-                  "slots": [],
-                  "samples": [
-                      "no",
-                      "nope",
-                      "nah"
                   ]
                 },
                 {
@@ -119,21 +169,38 @@
                     "slots": []
                 },
                 {
+                    "name": "ScoreIntent",
+                    "samples": [
+                      "what is my score",
+                      "what is my current score",
+                      "my score",
+                      "my score plese",
+                      "how many points",
+                      "my points",
+                      "all points"
+                    ],
+                    "slots": []
+                },
+                {
                     "name": "BuyIntent",
                     "samples": [
                       "buy {ProductName}",
                       "purchase {ProductName}",
                       "want {ProductName}",
                       "would like {ProductName}",
-                      "buy {ProductName} pack",
-                      "purchase {ProductName} pack",
-                      "want {ProductName} pack",
-                      "would like {ProductName} pack"
+                      "buy {ProductName} life line",
+                      "purchase {ProductName} life line",
+                      "want {ProductName} life line",
+                      "would like {ProductName} life line",
+                      "get {ProductName} life line",
+                      "get {ProductName}",
+                      "get the {ProductName} life line",
+                      "get the {ProductName}"
                     ],
                     "slots": [
                       {
                         "name": "ProductName",
-                        "type": "LIST_OF_PRODUCT_NAMES"
+                        "type": "LIST_OF_LIFELINE_NAMES"
                       }
                     ]
                 },
@@ -156,15 +223,24 @@
             ],
             "types": [
                 {
-                    "name": "LIST_OF_PRODUCT_NAMES",
+                    "name": "LIST_OF_LIFELINE_NAMES",
                     "values": [
                       {
-                        "id": "reference_name",
+                        "id": "glide",
                         "name": {
-                          "value": "Surprise Pack",
-                          "synonyms": [
-                            "A surprise"
-                          ]
+                          "value": "glide"
+                        }
+                      },
+                      {
+                        "id": "jump",
+                        "name": {
+                          "value": "jump"
+                        }
+                      },
+                      {
+                        "id": "fly",
+                        "name": {
+                          "value": "fly"
                         }
                       }
                     ]

@@ -8,21 +8,38 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: 'Welcome, you can say Hello or Help. Which would you like to try?',
+            WELCOME_MSG: 'Welcome back to Kids Spark. To start a new game you can say \'start new game\',  or to hear about the premium categories for purchase, say \'What can I buy\'. For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_BACK_MSG: 'Welcome back to Kids Spark. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_REPROMPT_MSG: 'I didn\'t catch that. What can I help you with?',
             HELLO_MSG: 'Hello World!',
-            HELP_MSG: 'You can say hello to me! How can I help?',
             GOODBYE_MSG: 'Goodbye!',
             REFLECTOR_MSG: 'You just triggered {{intentName}}',
             FALLBACK_MSG: 'Sorry, I don\'t know about that. Please try again.',
             ERROR_MSG: 'Sorry, I had trouble doing what you asked. Please try again.',
             CANNOT_BUY_RIGHT_NOW: 'I don\'t think we have a product by that name.  Can you try again?',
-            START_QUIZ_MESSAGE: `OK.  Here is your first questions for this game play.`,
+            START_QUIZ_MESSAGE: 'OK.  Let\'s begin \'Me Millionaire\' . ',
             CANNOT_CANCEL_RIGHT_NOW: '',
             ERROR_QUESTION_FETCH: 'Sorry there was an error retrieving the questions. Please try again after sometime!',
             ALL_QUESTIONS_ANSWERED: 'Congratualtions! You have answered all the questions. Well Done!',
             QUESTIONS_ANSWERED_CORRECTLY: ' This is the right answer. ',
-            NEXT_QUESTION: ' Let us proceed to next question. ',
-            CURRENT_SCORE: ' Your current score is {{score}} '
+            QUESTIONS_ANSWERED_WORNG: ' OH NO!    This     is     the      wrong     answer.  ',
+            NEXT_QUESTION: ' Let us proceed to your next question. ',
+            QUESTIONS_JUMP: ' You can still use your glide life line. To you and buy out this questions,  please say buy GLIDE . ', 
+            QUESTIONS_CANNOT_JUMP: ' Unfortunatelly you can not use any your GLIDE Quetion Life Line this time. Please start new game. ', 
+            QUESTIONS_REPROMPT_MSG: 'I didn\'t catch that.' ,
+            HELP_MSG: ' Here are your life lines detail. You can use Fifty  Fifty option to listen to couple of answers one right and another worng. ' 
+            + ' Your another life line Expert Opinion can provide you some guidance for the correct answer. '
+            + ' The third life line GLIDE can take you through an incorrect answers, but you need to buy GLIDE PACK ',
+            CURRENT_SCORE: ' Your current score is {{score}} . ',
+            CURRENT_SCORE_ERROR: ' Please resume or start a game to know the game score. ',
+            FIFTY_FITY_MSG: ' Here are the two options for your question ',
+            EXPERT_REVIEW_MSG: ' This is what expert has to say about your question ',
+            LIFE_LINE_ERROR_MSG: ' Sorry, you can only use this life line when your game is in progress. Please resume or start a new game to use your life lines. ',
+            LIFE_LINE_MSG: ' You have {{lifeLinesLeft}} line lines left. ',
+            LIFE_LINE_EXHAUSTED: ' Sorry, You have already used {{lifeLineName}} life line. Please use another life line. ',
+            LIFE_LINES_SATUS: ' To know about other life lines say my life line or life lines status ',
+            CURRENT_QUESTION: 'Here is your current question {{currentQuestion}} ',
+            START_GAME_MSG: 'To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?'
         }
     },
     es: {

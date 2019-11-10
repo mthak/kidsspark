@@ -53,7 +53,7 @@ const YesHandler = {
     },
     handle(handlerInput) {
         console.log("YesHandler/StartOverIntent: handle");
-        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         sessionAttributes.state = states.START
         QuizHandler.handle(handlerInput);
     },
@@ -68,6 +68,13 @@ const ResumeHandler = {
     },
     handle(handlerInput) {
         console.log("ResumeHandler: handle");
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        if (sessionAttributes.gameQuestions == undefined || sessionAttributes.gameQuestions == null) {
+            return response.speak(handlerInput.t('RESUEM_ERROR_MSG'))
+            .reprompt(handlerInput.t('RESUEM_ERROR_MSG'))
+            .getResponse();
+    
+        }
         QuizHandler.handle(handlerInput);
     },
 };
@@ -232,7 +239,7 @@ const QuizHandler = {
       const response = handlerInput.responseBuilder;
       var questions = null;
 
-      if (sessionAttributes.state === states.START) {
+      if (sessionAttributes.state == states.START) {
             questions = await fetchAllQuestions();
             console.error("*****************GOT QUESTIONS ***************** ");
             //Resetting every field as this is the start of new game
@@ -355,10 +362,9 @@ function generatePresentableQuestion(questions, handlerInput) {
     var conversationString = handlerInput.t('ERROR_QUESTION_FETCH');
     
     if(currentQuestion != null) {
-    	console.info("generatePresentableQuestion: counting questions");
-        const questionBegin = " Here is your question coming up now.  "; //"You have " + easyQuestions + " easy questions, " + mediumQuestions + " medium questions " + hardQuestions + " hard questions left. Here is your question coming up now. "
-
-        return  [questionBegin + currentQuestion.ques, currentQuestion.ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
+        console.info("generatePresentableQuestion: counting questions");
+        
+        return  [handlerInput.t('QUESTION_BEGIN') + currentQuestion.ques, currentQuestion.ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
     } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
         sessionAttributes.currentQuestion = null;

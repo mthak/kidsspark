@@ -11,14 +11,15 @@ module.exports = {
             WELCOME_MSG: 'Welcome back to Kids Spark. To start a new game you can say \'start new game\',  or to hear about the premium categories for purchase, say \'What can I buy\'. For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_BACK_MSG: 'Welcome back to Kids Spark. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_REPROMPT_MSG: 'I didn\'t catch that. What can I help you with?',
-            GOODBYE_MSG: 'Goodbye! Thank you for playing Me Millionaire',
+            GOODBYE_MSG: 'Goodbye! Thank you for playing Kids Spark',
             REFLECTOR_MSG: 'You just triggered {{intentName}}',
             FALLBACK_MSG: 'Sorry, I don\'t know about that. Please try again.',
             ERROR_MSG: 'Sorry, I had trouble doing what you asked. Please try again.',
             CANNOT_BUY_RIGHT_NOW: 'I don\'t think we have a product by that name.  Can you try again?',
-            START_QUIZ_MESSAGE: 'OK.  Let\'s begin \'Me Millionaire\' . ',
+            START_QUIZ_MESSAGE: 'OK.  Let\'s begin \'Kids Spark\' . ',
             CANNOT_CANCEL_RIGHT_NOW: 'There was a problem while cancelling this purchase. Please try again after some times',
             ERROR_QUESTION_FETCH: 'Sorry there was an error retrieving the questions. Please try again after sometime!',
+            QUESTION_BEGIN: ' Here is your question coming up now. ',
             ALL_QUESTIONS_ANSWERED: 'Congratualtions! You have answered all the questions. Well Done!',
             QUESTIONS_ANSWERED_CORRECTLY: ' This is the right answer. ',
             QUESTIONS_ANSWERED_WORNG: ' OH NO!    This     is     the      wrong     answer.  ',
@@ -40,7 +41,8 @@ module.exports = {
             CURRENT_QUESTION: 'Here is your current question {{currentQuestion}} ',
             START_GAME_MSG: 'To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
             GAME_RULES_MSG: 'This game is about solving questions on various skills. You will get 3 life lines to help you while playing.',
-            USE_LIFE_LINES: 'At any point of time you can say use Fifty Fifty or use Expert Review or Buy Glide life line '
+            USE_LIFE_LINES: 'At any point of time you can say use Fifty Fifty or use Expert Review or Buy Glide life line ',
+            RESUEM_ERROR_MSG: 'Sorry there are no games to resume. To start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?'
 
         }
     },

@@ -20,12 +20,23 @@
                     "slots": [],
                     "samples": [
                         "start game",
+                        "start a game",
+                        "start the game",
                         "let's begin",
+                        "let's begin a game",
+                        "let's begin the game",
                         "begin",
+                        "begin game",
+                        "begin the game",
                         "start",
                         "lets play",
+                        "lets play game",
+                        "lets play the game",
+                        "lets play a game",
                         "start play",
-                        "play"
+                        "play",
+                        "play a game",
+                        "play the game"
                     ]
                 },
                 {
@@ -128,6 +139,9 @@
                   "samples": [
                       "previous game",
                       "resume game",
+                      "resume the game",
+                      "resume the previous game",
+                      "resume previous game",
                       "start previous game",
                       "previous game",
                       "play old game"

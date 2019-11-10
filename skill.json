@@ -24,94 +24,6 @@
           ],
           "keywords": []
         },
-        "en-CA": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa open Kids Spark",
-            "ask kids spark",
-            "launch kids spark"
-          ],
-          "keywords": []
-        },
-        "en-IN": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa open Kids Spark",
-            "ask kids spark",
-            "launch kids spark"
-          ],
-          "keywords": []
-        },
-        "en-AU": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa open Kids Spark",
-            "ask kids spark",
-            "launch kids spark"
-          ],
-          "keywords": []
-        },
-        "es-ES": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa abre hola mundo",
-            "hola",
-            "ayuda"
-          ],
-          "keywords": []
-        },
-        "es-MX": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa abre hola mundo",
-            "hola",
-            "ayuda"
-          ],
-          "keywords": []
-        },
-        "es-US": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa abre hola mundo",
-            "hola",
-            "ayuda"
-          ],
-          "keywords": []
-        },
-        "fr-FR": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa ouvre le génie des salutations",
-            "bonjour",
-            "aide"
-          ],
-          "keywords": []
-        },
-        "fr-CA": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa ouvre le génie des salutations",
-            "bonjour",
-            "aide"
-          ],
-          "keywords": []
-        },
         "ja-JP": {
           "name": "Kids Spark",
           "summary": "Sample Short Description",
@@ -131,39 +43,6 @@
             "Alexa öffne hallo welt",
             "hallo",
             "hilfe"
-          ],
-          "keywords": []
-        },
-        "it-IT": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa apri ciao mondo",
-            "ciao",
-            "aiuto"
-          ],
-          "keywords": []
-        },
-        "hi-IN": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa मज़ेदार नमस्ते दुनिया",
-            "hello",
-            "मदद करो"
-          ],
-          "keywords": []
-        },
-        "pt-BR": {
-          "name": "Kids Spark",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa abra olá mundo",
-            "olá",
-            "ajuda"
           ],
           "keywords": []
         }

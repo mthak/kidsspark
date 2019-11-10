@@ -26,11 +26,11 @@ const LaunchRequestHandler = {
     handle(handlerInput) {
         console.log('LaunchRequestHandler: handle');
         const locale = handlerInput.requestEnvelope.request.locale;
-        const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        
+        console.log('LaunchRequestHandler: Locale for this request is ' + locale);
 
-        if (sessionAttributes.state == states.QUIZ) {
-            //TODO Welcome back
+        if (sessionAttributes.state === states.START || sessionAttributes.state == undefined) {
             return handlerInput.responseBuilder
                 .speak(handlerInput.t('WELCOME_MSG'))
                 .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
@@ -357,8 +357,8 @@ function generatePresentableQuestion(questions, handlerInput) {
     if(currentQuestion != null) {
     	console.info("generatePresentableQuestion: counting questions");
         const questionBegin = " Here is your question coming up now.  "; //"You have " + easyQuestions + " easy questions, " + mediumQuestions + " medium questions " + hardQuestions + " hard questions left. Here is your question coming up now. "
-        //TODO Translate
-        return  [questionBegin + currentQuestion.ques, currentQuestion.ques, currentQuestion];
+
+        return  [questionBegin + currentQuestion.ques, currentQuestion.ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
     } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
         sessionAttributes.currentQuestion = null;
@@ -411,15 +411,15 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
 
         return ms.getInSkillProducts(handlerInput.requestEnvelope.request.locale).then((res) => {
             
-            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'glide');
-            if (hintpack.length < 10 && hintpack[0].purchasable === 'PURCHASABLE') {
+            const glideLifeLine = res.inSkillProducts.filter(record => record.referenceName === 'glide');
+            if (glideLifeLine[0].purchasable === 'PURCHASABLE') {
                 return handlerInput.responseBuilder
                     .addDirective({
                         'type': 'Connections.SendRequest',
                         'name': 'Buy',
                         'payload': {
                             'InSkillProduct': {
-                                'productId': hintpack[0].productId,
+                                'productId': glideLifeLine[0].productId,
                             },
                         },
                         'token': 'correlationToken',
@@ -456,15 +456,15 @@ const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
 
         return ms.getInSkillProducts(handlerInput.requestEnvelope.request.locale).then((res) => {
             
-            const hintpack = res.inSkillProducts.filter(record => record.referenceName === 'glide');
-            if (hintpack.length < 5 && hintpack[0].purchasable === 'PURCHASABLE') {
+            const glideLifeLine = res.inSkillProducts.filter(record => record.referenceName === 'glide');
+            if (glideLifeLine[0].purchasable === 'PURCHASABLE') {
                 return handlerInput.responseBuilder
                     .addDirective({
                         'type': 'Connections.SendRequest',
                         'name': 'Cancel',
                         'payload': {
                             'InSkillProduct': {
-                                'productId': hintpack[0].productId,
+                                'productId': glideLifeLine[0].productId,
                             },
                         },
                         'token': 'correlationToken',
@@ -527,8 +527,20 @@ const HelpIntentHandler = {
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('HELP_MSG');
-        //TODO You have two life line
-        //TODO If all your life line has finished you can buy out the question
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+const GameRulesHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GameRulesIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = handlerInput.t('GAME_RULES_MSG') + handlerInput.t('HELP_MSG');
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -586,7 +598,7 @@ const SessionEndedRequestHandler = {
     	sessionAttributes.state = states.QUIZ;
         console.log(`~~~~ Session ended: ${JSON.stringify(handlerInput.requestEnvelope)}`);
         // Any cleanup logic goes here.
-        return handlerInput.responseBuilder.speak("Closing out session please try starting skill again").getResponse(); // notice we send an empty response
+        return handlerInput.responseBuilder.getResponse(); // notice we send an empty response
     }
 };
 /* *
@@ -746,6 +758,7 @@ exports.handler = Alexa.SkillBuilders.standard()
         BuyHintHandler,
         CancelPurchaseHandler,
         BuyHintResponseHandler,
+        GameRulesHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
@@ -760,40 +773,3 @@ exports.handler = Alexa.SkillBuilders.standard()
     .withTableName('kids-spark')
     .withAutoCreateTable(true)
     .lambda();
-
-
-
-
-    // return ms.getInSkillProducts(locale).then(
-    //     function reportPurchasedProducts(result) {
-    //       const entitledProducts = getAllEntitledProducts(result.inSkillProducts);
-    //       if (entitledProducts && entitledProducts.length > 0) {
-    //         // Customer owns one or more products
-  
-    //         return handlerInput.responseBuilder
-    //           .speak(`Welcome to Kids Spark. You currently own ${getSpeakableListOfProducts(entitledProducts)}` +
-    //             ' products. To start your game you can say, \'start game\' or you can ask' +
-    //             ' for a specific category you have purchased, for example, say \'Tell me a science fact\'. ' +
-    //             ' To know what else you can buy, say, \'What can i buy?\'. So, what can I help you' +
-    //             ' with?')
-    //           .reprompt('I didn\'t catch that. What can I help you with?')
-    //           .getResponse();
-    //       }
-  
-    //       // Not entitled to anything yet.
-    //       console.log('No entitledProducts');
-    //       return handlerInput.responseBuilder
-    //         .speak(`Welcome to Kids Spark. To start your game you can say 'start game',` +
-    //           ' or to hear about the premium categories for purchase, say \'What can I buy\'. ' +
-    //           ' For help, say , \'Help me\'... So, What can I help you with?')
-    //         .reprompt('I didn\'t catch that. What can I help you with?')
-    //         .getResponse();
-    //     },
-    //     function reportPurchasedProductsError(err) {
-    //       console.log(`Error calling InSkillProducts API: ${err}`);
-  
-    //       return handlerInput.responseBuilder
-    //         .speak('Something went wrong in loading your purchase history')
-    //         .getResponse();
-    //     },
-    // );

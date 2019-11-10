@@ -5,24 +5,24 @@
   "publishingInformation": {
     "locales": {
       "en-US": {
-        "name": "Kids Spark Surprise Pack",
-        "summary": "This is a surprize gift pack for your kid.",
-        "description": "When your kid accumulate five thousand points you can buy gift of appriciation for your child with 4.99 dollars.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T153109Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6dc37081f300215fdec28ec4e6f354badc3d0beb822714dde923a9135aceb208",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T153109Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=52ea161908861726cd1117b3389be9033e8a3ded44e0907122752ccccddbaf23",
+        "name": "Kids Spark Glide Life Line",
+        "summary": "This is a glide life line for your kid.",
+        "description": "When your kid accumulate answers and question incorrectly. This glide life line can be used jump over the question and keep moving ahead.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T221259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=839f89ce576aacd350334de3baf58b10a28f77512eb7b9fd66429551d6266706",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191110T221259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e24d644b54a63d38c2642ddf4ae9c98159b9348d7706fe7f6c691e0e9a123c79",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",
           "Alexa, purchase a gift"
         ],
         "keywords": [
-          "Surprise Gift",
-          "Kids Spark Surprise",
-          "Surprise Pack"
+          "Glide",
+          "Kids Spark Flide",
+          "Glide Life Line"
         ],
         "customProductPrompts": {
-          "purchasePromptDescription": "The gift pack will have few surprises.",
-          "boughtCardDescription": "Thanks for purchasing the surprise gift pack.  Your gift will arrive soon!"
+          "purchasePromptDescription": "The glide life line can help you jump over an incorrect answer.",
+          "boughtCardDescription": "Thanks for purchasing the glide life line.  You can now continue with your game and become Me Millionaire!"
         }
       }
     },
@@ -49,6 +49,6 @@
       }
     }
   },
-  "testingInstructions": "TODO: REPLACE THIS WITH TESTING INSTRUCTIONS FOR THE CERTIFICATION TEAM SO THEY KNOW HOW TO PURCHASE AND USE THIS PRODUCT",
+  "testingInstructions": "Your game should be in progress to buy this glide life line. To buy this glide life line. Say 'buy glide' or 'buy glide life line' ",
   "purchasableState": "PURCHASABLE"
 }

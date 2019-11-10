@@ -29,6 +29,21 @@
                     ]
                 },
                 {
+                    "name": "GameRulesIntent",
+                    "slots": [],
+                    "samples": [
+                        "game rules",
+                        "skill rules",
+                        "what are the rules",
+                        "what game is it",
+                        "rules",
+                        "how to play",
+                        "how to play this game",
+                        "tell me about this game",
+                        "how to play this skill"
+                    ]
+                },
+                {
                     "name": "LifeLineIntent",
                     "slots": [],
                     "samples": [
@@ -50,6 +65,7 @@
                     "slots": [],
                     "samples": [
                         "use Fifty Fifty life line",
+                        "use Fifty Fifty",
                         "use first life line",
                         "use right wrong life line",
                         "Ok Fifty Fifty life line",
@@ -71,6 +87,8 @@
                     "slots": [],
                     "samples": [
                         "use Expert Review line",
+                        "use Expert Review life line",
+                        "use Expert Review",
                         "use second life line",
                         "use review life line",
                         "use Expert life line",
@@ -187,11 +205,13 @@
                       "buy {ProductName}",
                       "purchase {ProductName}",
                       "want {ProductName}",
-                      "would like {ProductName}",
+                      "would like to buy {ProductName}",
                       "buy {ProductName} life line",
                       "purchase {ProductName} life line",
-                      "want {ProductName} life line",
+                      "want to buy {ProductName} life line",
                       "would like {ProductName} life line",
+                      "want to buy {ProductName}",
+                      "would like {ProductName}",
                       "get {ProductName} life line",
                       "get {ProductName}",
                       "get the {ProductName} life line",

@@ -133,7 +133,7 @@ const ExpertReviewHandler = {
         if (sessionAttributes.state == states.INPROGRESS) {
 
             if (!sessionAttributes.expertReviewUsed) {
-                speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.help;
+                speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.hint;
                 repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 sessionAttributes.expertReviewUsed = true;
             } else {
@@ -165,8 +165,16 @@ const ScoreHandler = {
         var repromt = null;
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         let response = handlerInput.responseBuilder;
-        let response = handlerInput.responseBuilder;
         if (sessionAttributes.state == states.INPROGRESS) {
+
+
+            var lifeLinesLeft = "";
+            if(sessionAttributes.fiftyFityUsed === false)
+                lifeLinesLeft = " fifty ffity, " + lifeLinesLeft;
+            if(sessionAttributes.expertReviewUsed === false)
+                lifeLinesLeft = " expert review, " + lifeLinesLeft;
+            if(sessionAttributes.glideOptionUsed === false)
+                lifeLinesLeft = " glide , " + lifeLinesLeft;
 
             speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
             repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
@@ -195,7 +203,7 @@ const LifeLineHandler = {
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         let response = handlerInput.responseBuilder;
         if (sessionAttributes.state == states.INPROGRESS) {
-            speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.help;
+
             var lifeLinesLeft = "";
             if(sessionAttributes.fiftyFityUsed === false)
                 lifeLinesLeft = " fifty ffity, " + lifeLinesLeft;
@@ -312,7 +320,7 @@ const QuizResponseHandler = {
             if (sessionAttributes.glideOptionUsed) {	
                 speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_JUMP');
             } else {
-                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + + handlerInput.t('QUESTIONS_CANNOT_JUMP');
+                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_CANNOT_JUMP');
             }
             repeatOutput = handlerInput.t('QUESTIONS_REPROMPT_MSG');
             //TODO get the buy content here
@@ -595,8 +603,10 @@ const SessionEndedRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'SessionEndedRequest';
     },
     handle(handlerInput) {
-    	const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-    	sessionAttributes.state = states.QUIZ;
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        if(sessionAttributes.gameQuestions != undefined) {
+            sessionAttributes.state = states.QUIZ;
+        }
         console.log(`~~~~ Session ended: ${JSON.stringify(handlerInput.requestEnvelope)}`);
         // Any cleanup logic goes here.
         return handlerInput.responseBuilder.getResponse(); // notice we send an empty response

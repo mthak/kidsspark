@@ -8,7 +8,7 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: 'Welcome back to Millionaire Monkeys. To start a new game you can say \'start new game\',  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_MSG: 'Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say \'start new game\',  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_BACK_MSG: 'Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_REPROMPT_MSG: 'I didn\'t catch that. What can I help you with?',
             GOODBYE_MSG: 'Goodbye! Thank you for playing Millionaire Monkeys',
@@ -40,7 +40,7 @@ module.exports = {
             LIFE_LINES_SATUS: ' To know about other life lines say my life line or life lines status ',
             CURRENT_QUESTION: 'Here is your current question {{currentQuestion}} ',
             START_GAME_MSG: 'To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
-            GAME_RULES_MSG: 'This game is about solving questions on various skills. You will get 3 life lines to help you while playing.',
+            GAME_RULES_MSG: 'This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. ',
             USE_LIFE_LINES: 'At any point of time you can say use Fifty Fifty or use Expert Review or Buy Glide life line ',
             RESUEM_ERROR_MSG: 'Sorry there are no games to resume. To start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?'
 

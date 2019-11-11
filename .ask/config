@@ -18,16 +18,16 @@
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "d1d67b792904e51c75ad798a4ea523d8"
+            "eTag": "8cec4b7587452e2fc0a2317d47cc4a1e"
           },
           "en-AU": {
             "eTag": "71e9322fc449810eef8e195e21332cba"
           },
           "en-GB": {
-            "eTag": "636f90fc678f5606d0062c622b28f250"
+            "eTag": "8887e13f039aee6bbb73603e8ce7d7bf"
           },
           "en-US": {
-            "eTag": "c923702a2d48124c796148b606e8a8af"
+            "eTag": "286f2033f5d2764bd38156e3e0b0a5e2"
           },
           "en-CA": {
             "eTag": "2f9fb50fc07ba1cac2ab169838db07ab"
@@ -48,7 +48,7 @@
             "eTag": "8c604c1041dae6e9b98df1b4c8617eba"
           },
           "ja-JP": {
-            "eTag": "3dc02f478490544fbff7dfa399ecdde2"
+            "eTag": "fd1b82ee2f5ac820a45de5e69bfa9e51"
           },
           "es-MX": {
             "eTag": "45f7acb9843efefd059c87dbfe450d52"
@@ -73,7 +73,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "108609c1-7599-4cf8-b712-945f93eac3e6",
+            "revisionId": "3b2c8517-3934-452c-b122-dd34dbf1c853",
             "runtime": "nodejs8.10"
           }
         ]

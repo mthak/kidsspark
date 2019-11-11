@@ -20,6 +20,8 @@
                     "slots": [],
                     "samples": [
                         "start game",
+                        "start a new game",
+                        "start new game",
                         "start a game",
                         "start the game",
                         "let's begin",
@@ -63,12 +65,19 @@
                         "my life lines",
                         "my life line",
                         "what are my life lines",
+                        "what are my life line",
                         "how many life lines left",
+                        "how many life line left",
                         "life line status",
+                        "life lines status",
                         "my life line status",
+                        "my life lines status",
                         "tell me about my life lines",
                         "tell more about life lines",
-                        "tell more about the life lines"
+                        "tell more about the life lines",
+                        "tell me about my life line",
+                        "tell more about life line",
+                        "tell more about the life line"
                     ]
                 },
                 {

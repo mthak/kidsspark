@@ -126,23 +126,6 @@
                     ]
                 },
                 {
-                  "name": "AMAZON.YesIntent",
-                  "slots": [],
-                  "samples": [
-                      "yes",
-                      "yeah",
-                      "yup",
-                      "start new game",
-                      "play a new game",
-                      "play new game",
-                      "start a new game",
-                      "begin a new game",
-                      "start game",
-                      "begin new game",
-                      "new game"
-                  ]
-                },
-                {
                   "name": "ResumeIntent",
                   "slots": [],
                   "samples": [

@@ -189,18 +189,6 @@
                     "samples": []
                 },
                 {
-                    "name": "WhatCanIBuyIntent",
-                    "samples": [
-                      "what can I buy",
-                      "what can I shop for",
-                      "tell me what I can buy",
-                      "buy",
-                      "shop",
-                      "purchase"        
-                    ],
-                    "slots": []
-                },
-                {
                     "name": "ScoreIntent",
                     "samples": [
                       "what is my score",

@@ -8,7 +8,7 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: 'Welcome back to Millionaire Monkeys. To start a new game you can say \'start new game\',  or to hear about the premium categories for purchase, say \'What can I buy\'. For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_MSG: 'Welcome back to Millionaire Monkeys. To start a new game you can say \'start new game\',  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_BACK_MSG: 'Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_REPROMPT_MSG: 'I didn\'t catch that. What can I help you with?',
             GOODBYE_MSG: 'Goodbye! Thank you for playing Millionaire Monkeys',

@@ -30,15 +30,17 @@ const LaunchRequestHandler = {
         
         console.log('LaunchRequestHandler: Locale for this request is ' + locale);
 
-        if (sessionAttributes.state === states.START || sessionAttributes.state == undefined) {
+        if (sessionAttributes.gameQuestions == undefined) {
             return handlerInput.responseBuilder
                 .speak(handlerInput.t('WELCOME_MSG'))
                 .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
+                .withShouldEndSession(false)
                 .getResponse();
         } else {
             return handlerInput.responseBuilder
                 .speak(handlerInput.t('WELCOME_BACK_MSG'))
                 .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
+                .withShouldEndSession(false)
                 .getResponse();
         }
     }

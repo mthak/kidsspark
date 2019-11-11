@@ -8,15 +8,15 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: 'Welcome back to Kids Spark. To start a new game you can say \'start new game\',  or to hear about the premium categories for purchase, say \'What can I buy\'. For help, say , \'Help me\'... So, What can I help you with?',
-            WELCOME_BACK_MSG: 'Welcome back to Kids Spark. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_MSG: 'Welcome back to Millionaire Monkeys. To start a new game you can say \'start new game\',  or to hear about the premium categories for purchase, say \'What can I buy\'. For help, say , \'Help me\'... So, What can I help you with?',
+            WELCOME_BACK_MSG: 'Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\'.  For help, say , \'Help me\'... So, What can I help you with?',
             WELCOME_REPROMPT_MSG: 'I didn\'t catch that. What can I help you with?',
-            GOODBYE_MSG: 'Goodbye! Thank you for playing Kids Spark',
+            GOODBYE_MSG: 'Goodbye! Thank you for playing Millionaire Monkeys',
             REFLECTOR_MSG: 'You just triggered {{intentName}}',
             FALLBACK_MSG: 'Sorry, I don\'t know about that. Please try again.',
             ERROR_MSG: 'Sorry, I had trouble doing what you asked. Please try again.',
             CANNOT_BUY_RIGHT_NOW: 'I don\'t think we have a product by that name.  Can you try again?',
-            START_QUIZ_MESSAGE: 'OK.  Let\'s begin \'Kids Spark\' . ',
+            START_QUIZ_MESSAGE: 'OK.  Let\'s begin \'Millionaire Monkeys\' . ',
             CANNOT_CANCEL_RIGHT_NOW: 'There was a problem while cancelling this purchase. Please try again after some times',
             ERROR_QUESTION_FETCH: 'Sorry there was an error retrieving the questions. Please try again after sometime!',
             QUESTION_BEGIN: ' Here is your question coming up now. ',

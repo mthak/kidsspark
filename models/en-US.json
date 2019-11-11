@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "kids spark",
+            "invocationName": "millionaire monkeys",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",

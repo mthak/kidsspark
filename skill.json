@@ -3,29 +3,29 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "name": "Kids Spark",
+          "name": "millionaire monkeys",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open kids spark",
-            "ask kids spark",
-            "launch kids spark"
+            "Alexa open millionaire monkeys",
+            "ask millionaire monkeys",
+            "launch millionaire monkeys"
           ],
           "keywords": []
         },
         "en-GB": {
-          "name": "Kids Spark",
+          "name": "millionaire monkeys",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open Kids Spark",
-            "ask kids spark",
-            "launch kids spark"
+            "Alexa open millionaire monkeys",
+            "ask millionaire monkeys",
+            "launch millionaire monkeys"
           ],
           "keywords": []
         },
         "ja-JP": {
-          "name": "Kids Spark",
+          "name": "millionaire monkeys",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [
@@ -36,7 +36,7 @@
           "keywords": []
         },
         "de-DE": {
-          "name": "Kids Spark",
+          "name": "millionaire monkeys",
           "summary": "Sample Short Description",
           "description": "Sample Full Description",
           "examplePhrases": [

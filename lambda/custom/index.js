@@ -205,13 +205,6 @@ const LifeLineHandler = {
             speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
             repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
 
-            //TODO case in which all life line are used
-            // if(sessionAttributes.fiftyFityUsed && sessionAttributes.expertReviewUsed && sessionAttributes.glideOptionUsed) {
-            //     speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
-            //     repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
-                
-            // }
-
             
         } else {
             console.log("LifeLineHandler: ELSE");

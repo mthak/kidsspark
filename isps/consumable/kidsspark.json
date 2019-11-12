@@ -4,12 +4,52 @@
   "referenceName": "glide",
   "publishingInformation": {
     "locales": {
+      "de-DE": {
+        "name": "Millionaire Monkeys Glide Life Line",
+        "summary": "Dies ist eine Gleit-Lebenslinie, mit der Sie eine falsche Antwort überspringen können.",
+        "description": "Wenn Ihr Kind Antworten und Fragen falsch ansammelt. Diese Gleit-Lebenslinie kann verwendet werden, um über die Frage zu springen und sich vorwärts zu bewegen.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c8d0/bd889b98ef244a9f83bc18e9c8046fc0/APP_ICON?versionId=iBgH0trsBrl81ThPN1VfSZjOO35vUt4w&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=89c2975d2234f59f32ad06539186130c0dc3e72a5f87672ec3262bd04466bd7c",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ab24/d2d0c4c16c6444a7befb448a278fe12e/APP_ICON_LARGE?versionId=nWYzsSNIfKVJhJLsiZtFUfRPz5.2RUn_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a8883e769eec90ca49d9df3d99f39b8e308510e7cfdcd53a326ff9aef5efcd4a",
+        "examplePhrases": [
+          "Alexa, kauf ein Geschenk"
+        ],
+        "keywords": [
+          "Glide",
+          "Millionaire Monkeys Glide",
+          "Glide Lebensader"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "Die Gleit-Lebenslinie kann Ihnen helfen, eine falsche Antwort zu überspringen.",
+          "boughtCardDescription": "Vielen Dank, dass Sie sich für die Glide Life Line entschieden haben. Sie können jetzt mit Ihrem Spiel fortfahren!"
+        }
+      },
       "en-US": {
         "name": "Millionaire Monkeys Glide Life Line",
-        "summary": "This is a glide life line for your kid.",
+        "summary": "This is a glide life line to help you skip over an incorrect answer.",
         "description": "When your kid accumulate answers and question incorrectly. This glide life line can be used jump over the question and keep moving ahead.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T104329Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e7d0cceed7748b0aad9aa68aa54134d03d5161d88df1d1391cea981721bf80b5",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T104329Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=49551336ac13cee418c39ec449358a4c8c8ca1a9b1968edef277b844dac0379d",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=118c2569073263437302626259dd19014f8e45d50c2f5e5d43b107b7d691a91a",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=00c156f28245aa722cf1fa43c91f404a13f13eefe513a5816967349f4a0e0b17",
+        "examplePhrases": [
+          "Alexa, buy a gift",
+          "Alexa, buy gift",
+          "Alexa, purchase a gift"
+        ],
+        "keywords": [
+          "Glide",
+          "Millionaire Monkeys Glide",
+          "Glide Life Line"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The glide life line can help you jump over an incorrect answer.",
+          "boughtCardDescription": "Thanks for purchasing the glide life line.  You can now continue with your game!"
+        }
+      },
+      "en-GB": {
+        "name": "Millionaire Monkeys Glide Life Line",
+        "summary": "This is a glide life line to help you skip over an incorrect answer.",
+        "description": "When your kid accumulate answers and question incorrectly. This glide life line can be used jump over the question and keep moving ahead.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/960a/3ed1138dfade4cb6ae14d5e9fef6cc09/APP_ICON?versionId=fg6bYpESf42lbGApmK9yZnzfS6OUlGYR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=836b4bcd5c9d00d45f4f27ba945e232fd766dc0e5989b8576a52d9c9bf3c20a0",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/949c/d0a8dfe7ef2844a28a8140c246c78d6f/APP_ICON_LARGE?versionId=tyMaHqFcP3Srf1yccjroKP27XalbOvFk&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T181123Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=056e926e8fd686ea8852c0f154df1b9e358c2a35efaa71d2f9f8ce9150d71533",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",
@@ -29,15 +69,28 @@
     "distributionCountries": [
       "US",
       "GB",
-      "DE",
-      "JP"
+      "DE"
     ],
     "pricing": {
+      "amazon.de": {
+        "releaseDate": "2019-11-11T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "EUR"
+        }
+      },
       "amazon.com": {
         "releaseDate": "2019-11-11T00:00Z",
         "defaultPriceListing": {
           "price": 0.99,
           "currency": "USD"
+        }
+      },
+      "amazon.co.uk": {
+        "releaseDate": "2019-11-11T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "GBP"
         }
       }
     },
@@ -47,7 +100,13 @@
   },
   "privacyAndCompliance": {
     "locales": {
+      "de-DE": {
+        "privacyPolicyUrl": "https://kidsspark.s3.amazonaws.com/privacy.html"
+      },
       "en-US": {
+        "privacyPolicyUrl": "https://kidsspark.s3.amazonaws.com/privacy.html"
+      },
+      "en-GB": {
         "privacyPolicyUrl": "https://kidsspark.s3.amazonaws.com/privacy.html"
       }
     }

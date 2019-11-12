@@ -24,17 +24,6 @@
           ],
           "keywords": []
         },
-        "ja-JP": {
-          "name": "millionaire monkeys",
-          "summary": "ミリオネアモンキーズへようこそ。このゲームは、さまざまなスキルに関する質問を解決するものです。",
-          "description": "ミリオネアモンキーズへようこそ。このゲームは、さまざまなスキルに関する質問を解決するものです。",
-          "examplePhrases": [
-            "Alexa 開いた millionaire monkeys",
-            "Alexa 尋ねる millionaire monkeys",
-            "Alexa 打ち上げる millionaire monkeys"
-          ],
-          "keywords": []
-        },
         "de-DE": {
           "name": "millionaire monkeys",
           "summary": "Mirioneamonkīzu e yōkoso. Kono gēmu wa, samazamana sukiru ni kansuru shitsumon o kaiketsu suru monodesu.",

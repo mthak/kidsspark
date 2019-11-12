@@ -44,7 +44,7 @@ module.exports = {
             USE_LIFE_LINES: '<voice name="Brian"><lang xml:lang="en-GB"> At any point of time you can say use Fifty Fifty or use Expert Review or Buy Glide life line </lang></voice>',
             RESUME_ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry there are no games to resume. To start a new game, say \'Start new Game\'.  For help, say , \'Help me\'. So, What can I help you with?</lang></voice>',
             CONSUMABLE_NOT_PURCHASED: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry glide was not purchased. </lang></voice>',
-            THANK_YOU_FOR_BUYING: '<voice name="Brian"><lang xml:lang="en-GB"> Thanks for buying glide life line .  {{askQuestion}}  </lang></voice>',
+            THANK_YOU_FOR_BUYING: '<voice name="Brian"><lang xml:lang="en-GB"> Thanks for buying glide life line . </lang></voice>',
             CAN_NOT_BUY_CONSUMABLE: '<voice name="Brian"><lang xml:lang="en-GB"> It looks like we are unable to sell hints right now.  Sorry.  Please try again or start a new game.</lang></voice>',
             DEFAULT_GAME_NAME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Please say,  create a new group to create a group to play. Or say, start a new game</lang></voice>',
             ERROR_CREATING_GROUP: '<voice name="Brian"><lang xml:lang="en-GB"> There was an error creating the group. Please try a single mode game. To start in single mode please say, Start single mode game. </lang></voice>',

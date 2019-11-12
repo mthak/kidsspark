@@ -331,6 +331,7 @@ const QuizHandler = {
         let speakOutput = askQuestion;
         console.error("*****************QUESTIONS RETRUNED***************** " + currentQuestion);
         sessionAttributes.currentQuestion = currentQuestion;
+        sessionAttributes.state = states.INPROGRESS
         return response.speak(speakOutput)
                      .reprompt(askAgain)
                      .withShouldEndSession(false)
@@ -592,7 +593,7 @@ const BuyHintResponseHandler = {
             sessionAttributes.glideOptionUsed = true;
             const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
             sessionAttributes.currentQuestion = newCurrentQuestion;
-            speakOutput = handlerInput.t('THANK_YOU_FOR_BUYING', {askQuestion, askQuestion});
+            speakOutput = handlerInput.t('THANK_YOU_FOR_BUYING') + askQuestion;
             repeatOutput = askAgain;
         } else if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ERROR') {
             // IF SOMETHING ELSE WENT WRONG WITH THE PURCHASE.

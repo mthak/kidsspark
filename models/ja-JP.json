@@ -93,7 +93,7 @@
                         }
                     ],
                     "samples":[
-"新しいグループ名{groupName}",
+                        "新しいグループ名{groupName}",
                         "新しいグループ{groupName}",
                         "新しいグループ{groupName}を作成",
                         "新しいグループ{groupName}グループを作成",

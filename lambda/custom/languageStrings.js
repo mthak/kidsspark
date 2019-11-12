@@ -8,7 +8,7 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> <audio src="https://kidsspark.s3.amazonaws.com/kbc.mp3"> Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say \'start new game\', to start a group or play in an existing group say \'create a new group\' or \'play in existing group\' followed by Group Name  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
+            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> <audio src="https://kidsspark.s3.amazonaws.com/kbc.mp3"/> Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say \'start new game\', to start a group or play in an existing group say \'create a new group\' or \'play in existing group\' followed by Group Name  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
             WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\' or Create a New Group.  For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
             WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that. What can I help you with?</lang></voice>',
             GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Goodbye! Thank you for playing Millionaire Monkeys</lang></voice>',
@@ -23,7 +23,7 @@ module.exports = {
             ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> Congratualtions! You have answered all the questions. Well Done! </lang></voice>',
             QUESTIONS_ANSWERED_CORRECTLY: '<voice name="Brian"><lang xml:lang="en-GB"> This is the right answer. </lang></voice>',
             QUESTIONS_ANSWERED_WORNG: '<voice name="Brian"><lang xml:lang="en-GB"> OH NO!    This     is     the      WRONG     answer......  </lang></voice>',
-            NEXT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB"> Let us proceed to your next question. </lang></voice>',
+            NEXT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB"> Let us proceed to your next question.<audio src="https://kidsspark.s3.amazonaws.com/ques.mp3"/> </lang></voice>',
             QUESTIONS_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> You can still buy and use your glide life line. If you want to glide over this question, please say buy GLIDE  life  line. </lang></voice>', 
             QUESTIONS_CANNOT_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> Unfortunately you have already used your GLIDE  life  line before. This game is ended ...  Please start a new game. </lang></voice>', 
             QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that.</lang></voice>' ,

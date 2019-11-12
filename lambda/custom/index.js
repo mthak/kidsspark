@@ -86,15 +86,18 @@ const GroupNameHandler = {
         console.log("GroupNameIntent: handle");
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const locale = handlerInput.requestEnvelope.request.locale;
-        const response = handlerInput.responseBuilder;
-        var speakOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
-        var repeatOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
-        const phrase = handlerInput.requestEnvelope.request.intent.slots.phrase.value;
+        
+        let response = handlerInput.responseBuilder;
+        let speakOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
+        let repeatOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
+        
+        const groupName = handlerInput.requestEnvelope.request.intent.slots.groupName.value;
         sessionAttributes.gameMode = "GROUP";
-        sessionAttributes.groupName = phrase;
+        sessionAttributes.groupName = groupName;
         sessionAttributes.state = states.GROUP_INIT;
+        console.log("GroupNameHandler: locale " + locale);
 
-        const [doesGroupNameExists, questions] = await validateGroupExists(phrase, locale);
+        const [doesGroupNameExists, questions] = await validateGroupExists(groupName, locale);
         
         if (questions == undefined || questions == null) {
             return response.speak(handlerInput.t('DEFAULT_GAME_NAME_MSG'))
@@ -127,6 +130,7 @@ const GroupNameHandler = {
 async function validateGroupExists(group, locale) {
     //TODO the api call
     const doesGroupNameExists = await Promise.resolve(apiservice.getKbcQuestions(group, locale)).then((response) => {
+        console.log("GroupNameHandler: validateGroupExists " + JSON.stringify(response));
         if (response.message == "undefined" || response.message == "existing" || response.message == null) {
             return [true, response.data];
         } else {
@@ -793,8 +797,8 @@ const RequestLog = {
       }
         
       
-      console.log('----- REQUEST -----');
-      console.log(`ATRRIBUTE ENVELOPE = ${JSON.stringify(handlerInput.attributesManager)}`);
+    //   console.log('----- REQUEST -----');
+    //   console.log(`ATRRIBUTE ENVELOPE = ${JSON.stringify(handlerInput.attributesManager)}`);
       // Apply the persistent attributes to the current session
       attributesManager.setSessionAttributes(Object.assign({}, persistentAtttributes, sessionAttributes));
       /**
@@ -817,11 +821,11 @@ const ResponseLog = {
         } = handlerInput;
         let sessionAttributes = attributesManager.getSessionAttributes();
         let persistentAtttributes = await attributesManager.getPersistentAttributes();
-        console.log('----- SESSION ATTRIBUTES -----');
-        console.log(JSON.stringify(sessionAttributes, null, 2));
+        // console.log('----- SESSION ATTRIBUTES -----');
+        // console.log(JSON.stringify(sessionAttributes, null, 2));
 
-        console.log('----- CURRENT PERSISTENT ATTRIBUTES -----');
-        console.log(JSON.stringify(persistentAtttributes, null, 2));
+        // console.log('----- CURRENT PERSISTENT ATTRIBUTES -----');
+        // console.log(JSON.stringify(persistentAtttributes, null, 2));
         attributesManager.setPersistentAttributes(sessionAttributes);
         await attributesManager.savePersistentAttributes();
         console.log('----- NEW PERSISTENT ATTRIBUTES -----');

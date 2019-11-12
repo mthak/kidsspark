@@ -62,7 +62,13 @@
                         "start play",
                         "play",
                         "play a game",
-                        "play the game"
+                        "play the game",
+                        "compete with group",
+                        "start with group",
+                        "start with existing group",
+                        "compete with the group",
+                        "compete with the existing group",
+                        "compete with existing group"
                     ]
                 },
                 {
@@ -91,12 +97,11 @@
                     "samples": [
                         "new group name {groupName}",
                         "new group {groupName}",
+                        "create a new group {groupName}",
                         "create a new group {groupName} group",
                         "create a new group with name {groupName}",
                         "create a new group name {groupName}",
                         "create a new {groupName} group",
-                        "start with new group {groupName}",
-                        "start new group {groupName}",
                         "create a group {groupName}",
                         "create a group with name {groupName}",
                         "create a group name {groupName}",
@@ -107,14 +112,10 @@
                         "want to play for {groupName}",
                         "want to compete with {groupName}",
                         "want to compete with {groupName} group",
-                        "compete with {groupName}",
-                        "start with {groupName}",
-                        "compete with {groupName} group",
                         "play in existing group {groupName}",
                         "existing group {groupName} group",
                         "existing group {groupName}",
                         "play with existing group {groupName}",
-                        "play {groupName}",
                         "play {groupName} group",
                         "play in group {groupName}"
                     ]

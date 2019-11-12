@@ -112,8 +112,8 @@ const GroupNameHandler = {
             repeatOutput = handlerInput.t('GROUP_ALREADY_EXISTS_REPROMPT');
            
         } else {
-            speakOutput = handlerInput.t('GROUP_ALREADY_EXISTS');
-            repeatOutput = handlerInput.t('GROUP_ALREADY_EXISTS_REPROMPT');
+            speakOutput = handlerInput.t('GROUP_NOT_EXISTS');
+            repeatOutput = handlerInput.t('GROUP_NOT_EXISTS_REPROMPT');
        
         }
         sessionAttributes.gameQuestions = questions;

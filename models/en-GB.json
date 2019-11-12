@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hello world",
+            "invocationName": "millionaire monkeys",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,16 +16,224 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "QuizIntent",
                     "slots": [],
                     "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
+                        "start game",
+                        "start a new game",
+                        "start new game",
+                        "start a game",
+                        "start the game now",
+                        "start the game",
+                        "start the game",
+                        "let's begin",
+                        "let's begin a game",
+                        "let's begin the game",
+                        "begin",
+                        "Start single mode game",
+                        "single mode game",
+                        "single mode",
+                        "begin game",
+                        "begin the game",
+                        "continue the game",
+                        "continue game",
+                        "let's continue the game",
+                        "lets continue the game",
+                        "let us continue the game",
+                        "let us continue with game",
+                        "let us continue",
+                        "let's continue with game",
+                        "let's continue",
+                        "lets continue with game",
+                        "lets continue",
+                        "start",
+                        "lets play",
+                        "lets play game",
+                        "lets play the game",
+                        "lets play a game",
+                        "let's play",
+                        "let's play game",
+                        "let's play the game",
+                        "let's play a game",
+                        "let us play",
+                        "let us play game",
+                        "let us play the game",
+                        "let us play a game",
+                        "start play",
+                        "play",
+                        "play a game",
+                        "play the game",
+                        "compete with group",
+                        "start with group",
+                        "start with existing group",
+                        "compete with the group",
+                        "compete with the existing group",
+                        "compete with existing group"
+                    ]
+                },
+                {
+                    "name": "GameRulesIntent",
+                    "slots": [],
+                    "samples": [
+                        "game rules",
+                        "skill rules",
+                        "what are the rules",
+                        "what game is it",
+                        "rules",
+                        "how to play",
+                        "how to play this game",
+                        "tell me about this game",
+                        "how to play this skill"
+                    ]
+                },
+                {
+                    "name": "GroupNameIntent",
+                    "slots": [
+                        {
+                            "name": "groupName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "new group name {groupName}",
+                        "new group {groupName}",
+                        "create a new group {groupName}",
+                        "create a new group {groupName} group",
+                        "create a new group with name {groupName}",
+                        "create a new group name {groupName}",
+                        "create a new {groupName} group",
+                        "create a group {groupName}",
+                        "create a group with name {groupName}",
+                        "create a group name {groupName}",
+                        "create a {groupName} group",
+                        "create {groupName} group",
+                        "want to play with {groupName}",
+                        "want to play in {groupName}",
+                        "want to play for {groupName}",
+                        "want to compete with {groupName}",
+                        "want to compete with {groupName} group",
+                        "play in existing group {groupName}",
+                        "existing group {groupName} group",
+                        "existing group {groupName}",
+                        "play with existing group {groupName}",
+                        "play {groupName} group",
+                        "play in group {groupName}"
+                    ]
+                },
+                {
+                    "name": "LifeLineIntent",
+                    "slots": [],
+                    "samples": [
+                        "life line",
+                        "life lines",
+                        "my life lines",
+                        "my life line",
+                        "what are my life lines",
+                        "what are my life line",
+                        "how many life lines left",
+                        "how many life line left",
+                        "life line status",
+                        "life lines status",
+                        "my life line status",
+                        "my life lines status",
+                        "tell me about my life lines",
+                        "tell more about life lines",
+                        "tell more about the life lines",
+                        "tell me about my life line",
+                        "tell more about life line",
+                        "tell more about the life line"
+                    ]
+                },
+                {
+                    "name": "FiftyFiftyIntent",
+                    "slots": [],
+                    "samples": [
+                        "use Fifty Fifty life line",
+                        "use Fifty Fifty",
+                        "use first life line",
+                        "use right wrong life line",
+                        "Ok Fifty Fifty life line",
+                        "ok Fifty Fifty",
+                        "Fifty Fifty",
+                        "I want to use Fifty Fifty life line",
+                        "I want to use first life line",
+                        "I want to use Fifty Fifty",
+                        "I will go for Fifty Fifty life line",
+                        "I will go for first life line",
+                        "I will go for Fifty Fifty",
+                        "I would go for Fifty Fifty life line",
+                        "I would go for first life line",
+                        "I would go for Fifty Fifty"
+                    ]
+                },
+                {
+                    "name": "ExpertReviewIntent",
+                    "slots": [],
+                    "samples": [
+                        "use Expert Review line",
+                        "use Expert Review life line",
+                        "use Expert Review",
+                        "use second life line",
+                        "use review life line",
+                        "use Expert life line",
+                        "ok Expert Review",
+                        "Expert Review",
+                        "I want to use Expert Review life line",
+                        "I want to use second life line",
+                        "I want to use Expert Review",
+                        "I will go for Expert Review life line",
+                        "I will go for second life line",
+                        "I will go for Expert Review",
+                        "I would go for Expert Review life line",
+                        "I would go for second life line",
+                        "I would go for Expert Review"
+                    ]
+                },
+                {
+                  "name": "ResumeIntent",
+                  "slots": [],
+                  "samples": [
+                      "previous game",
+                      "resume game",
+                      "resume the game",
+                      "resume the previous game",
+                      "resume previous game",
+                      "start previous game",
+                      "previous game",
+                      "play old game"
+                
+                  ]
+                },
+                {
+                  "name": "AMAZON.StartOverIntent",
+                  "samples": []
+                },
+                {
+                    "name": "QuizAnswerIntent",
+                    "slots": [
+                        {
+                            "name": "phrase",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "answer is {phrase}",
+                        "I think {phrase}",
+                        "I would go for {phrase} ",
+                        "the correct answer is {phrase}",
+                        "correct answer is {phrase}",
+                        "a {phrase}",
+                        "the {phrase}",
+                        "the answer is {phrase}",
+                        "is it {phrase}",
+                        "it is {phrase}",
+                        "it was {phrase}",
+                        "it might be {phrase}",
+                        "i think it is {phrase}",
+                        "i think it was {phrase}",
+                        "i think it might be {phrase}",
+                        "i think the answer is {phrase}",
+                        "i think the answer might be {phrase}"
                     ]
                 },
                 {
@@ -35,9 +243,89 @@
                 {
                     "name": "AMAZON.FallbackIntent",
                     "samples": []
-                }
+                },
+                {
+                    "name": "ScoreIntent",
+                    "samples": [
+                      "score",
+                      "tell my score",
+                      "what is my score",
+                      "what is my current score",
+                      "my score",
+                      "my score plese",
+                      "how many points",
+                      "my points",
+                      "all points"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "BuyIntent",
+                    "samples": [
+                      "buy {ProductName}",
+                      "purchase {ProductName}",
+                      "want {ProductName}",
+                      "would like to buy {ProductName}",
+                      "buy {ProductName} life line",
+                      "purchase {ProductName} life line",
+                      "want to buy {ProductName} life line",
+                      "would like {ProductName} life line",
+                      "want to buy {ProductName}",
+                      "would like {ProductName}",
+                      "get {ProductName} life line",
+                      "get {ProductName}",
+                      "get the {ProductName} life line",
+                      "get the {ProductName}"
+                    ],
+                    "slots": [
+                      {
+                        "name": "ProductName",
+                        "type": "LIST_OF_LIFELINE_NAMES"
+                      }
+                    ]
+                },
+                {
+                    "name": "CancelPurchaseIntent",
+                    "slots": [],
+                    "samples": [
+                        "cancel my purchase",
+                        "cancel purchase",
+                        "return my purchase",
+                        "return purchase",
+                        "refund my purchase",
+                        "refund purchase",
+                        "refund my transaction",
+                        "refund transaction",
+                        "cancel transaction",
+                        "cancel my transaction"
+                    ]
+                } 
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "LIST_OF_LIFELINE_NAMES",
+                    "values": [
+                      {
+                        "id": "glide",
+                        "name": {
+                          "value": "glide"
+                        }
+                      },
+                      {
+                        "id": "jump",
+                        "name": {
+                          "value": "jump"
+                        }
+                      },
+                      {
+                        "id": "fly",
+                        "name": {
+                          "value": "fly"
+                        }
+                      }
+                    ]
+                  }
+            ]
         }
     }
 }

@@ -19,7 +19,7 @@
                     "name": "QuizIntent",
                     "slots": [],
                     "samples": [
-"ゲームを始める",
+                     "ゲームを始める",
                         「新しいゲームを始める」,
                         「新しいゲームを開始する」,
                         「ゲームを開始する」,
@@ -62,7 +62,13 @@
                         「プレイを開始」,
                         "遊びます",
                         「ゲームをする」,
-                        "ゲームをする"
+                        "ゲームをする",
+                        「グループと競う」,
+                        「グループで開始」,
+                        「既存のグループから開始」,
+                        「グループと競う」,
+                        「既存のグループと競争する」,
+                        「既存のグループと競合する」
                     ] },
                 {
                     "name": "GameRulesIntent",
@@ -87,14 +93,13 @@
                         }
                     ],
                     "samples":[
-                        「新しいグループ名{groupName}」,
+「新しいグループ名{groupName}」,
                         「新しいグループ{groupName}」,
+                        「新しいグループ{groupName}を作成」,
                         「新しいグループ{groupName}グループを作成」,
                         「{groupName}という名前の新しいグループを作成」,
                         「新しいグループ名{groupName}を作成」,
                         「新しい{groupName}グループを作成」,
-                        「新しいグループ{groupName}で開始」,
-                        「新しいグループ{groupName}を開始」,
                         「グループ{groupName}を作成」,
                         「{groupName}という名前のグループを作成」,
                         「グループ名{groupName}を作成」,
@@ -105,14 +110,10 @@
                         「{groupName}でプレーしたい」,
                         「{groupName}と競合したい」,
                         「{groupName}グループと競合したい」,
-                        「{groupName}と競合する」,
-                        「{groupName}で開始」,
-                        「{groupName}グループと競合する」,
                         「既存のグループ{groupName}でプレイ」,
                         「既存のグループ{groupName}グループ」,
                         「既存のグループ{groupName}」,
                         「既存のグループ{groupName}で遊ぶ」,
-                        「{groupName}を再生」,
                         「{groupName}グループを再生」,
                         「グループ{groupName}でプレイ」
                     ]  },

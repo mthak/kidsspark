@@ -8,8 +8,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a glide life line for your kid.",
         "description": "When your kid accumulate answers and question incorrectly. This glide life line can be used jump over the question and keep moving ahead.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T060718Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b415b0477968f40eac9237d891b1258c20570a18602f5bdd609cc82928ac1cb2",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T060718Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6cfd548ed2c5041a1c29cf15422d485a8d55b7c5059a749099d4349b8dcf200e",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T070854Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a1a3ccd0d16d0e478f88297db39527e419391ab59500836a69a3d31181b8d868",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191112T070854Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c2bf6e062f32dcb235db32f19bab80aff0251740accb961e844020b446e3fc71",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",

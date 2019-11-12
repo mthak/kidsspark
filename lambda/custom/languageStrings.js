@@ -8,8 +8,8 @@
 module.exports = {
     en: {
         translation: {
-            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say \'start new game\', to start a group or play in an existing group say \'create a new group\' or \'play in existing group\' followed by Group Name  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
-            WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\' or Create a New Group.  For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
+            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say \'start new game\', to start a group or play in a group say \'create a new group\' or \'play in existing group\' followed by Group Name  or to hear about the Life Lines in this game, say \'Life Lines\'. For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
+            WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Welcome back to Millionaire Monkeys. To resume your previous game say \'resume game\', or to start a new game, say \'Start new Game\' or play in a group say \'create a new group\' or \'play in existing group\'.  For help, say , \'Help me\'... So, What can I help you with?</lang></voice>',
             WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that. What can I help you with?</lang></voice>',
             GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Goodbye! Thank you for playing Millionaire Monkeys</lang></voice>',
             REFLECTOR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You just triggered {{intentName}}</lang></voice>',
@@ -19,7 +19,7 @@ module.exports = {
             START_QUIZ_MESSAGE: '<voice name="Brian"><lang xml:lang="en-GB"> OK.  Let\'s begin \'Millionaire Monkeys\' . </lang></voice>',
             CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> There was a problem while cancelling this purchase. Please try again after some times</lang></voice>',
             ERROR_QUESTION_FETCH: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry there was an error retrieving the questions. Please say resume game or start a new game to continue! Or Please try again after some times</lang></voice>',
-            QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> To answer the question please say \'answer is \' and then your answer..... Here is your question coming up now. </lang></voice>',
+            QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> To answer the question please say, \'answer is \'... and then your answer..... Here is your question coming up now. </lang></voice>',
             ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> Congratualtions! You have answered all the questions. Well Done! </lang></voice>',
             QUESTIONS_ANSWERED_CORRECTLY: '<voice name="Brian"><lang xml:lang="en-GB"> This is the right answer. </lang></voice>',
             QUESTIONS_ANSWERED_WORNG: '<voice name="Brian"><lang xml:lang="en-GB"> OH NO!    This     is     the      WRONG     answer......  </lang></voice>',
@@ -35,7 +35,7 @@ module.exports = {
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Here are the two options for your question. </lang></voice>',
             EXPERT_REVIEW_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> This is what expert has to say about your question. </lang></voice>',
             LIFE_LINE_ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry, you can only use this life line when your game is in progress. Please resume or start a new game to use your life lines. </lang></voice>',
-            LIFE_LINE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You have {{lifeLinesLeft}} line lines left. </lang></voice>',
+            LIFE_LINE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You have {{lifeLinesLeft}} life lines left. </lang></voice>',
             LIFE_LINE_EXHAUSTED: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry, You have already used {{lifeLineName}} life line. Please use another life line. </lang></voice>',
             LIFE_LINES_SATUS: '<voice name="Brian"><lang xml:lang="en-GB"> To know about other life lines say my life line or life lines status. </lang></voice>',
             CURRENT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB">Here is your current question {{currentQuestion}} </lang></voice>',
@@ -58,8 +58,8 @@ module.exports = {
     },
     de: {
         translation: {
-            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Willkommen bei Millionaire Monkeys. In diesem Spiel geht es darum, Fragen zu verschiedenen Fähigkeiten zu lösen. Sie erhalten 15 Fragen und 3 Lebenslinien, die Ihnen beim Spielen helfen. Um ein neues Spiel zu starten, können Sie sagen, dass Sie ein neues Spiel starten, eine Gruppe starten oder in einer vorhandenen Gruppe spielen möchten, z. sagen wir, Lebenslinien. Wenn Sie Hilfe benötigen, sagen Sie: Helfen Sie mir ... Also, bei was kann ich Ihnen helfen?</lang></voice>',
-            WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Willkommen zurück bei Millionaire Monkeys. Um das vorherige Spiel fortzusetzen, sagen Sie "Spiel fortsetzen", oder um ein neues Spiel zu starten, sagen Sie "Neues Spiel starten" oder "Neue Gruppe erstellen". Wenn Sie Hilfe benötigen, sagen Sie: Helfen Sie mir ... Also, bei was kann ich Ihnen helfen?</lang></voice>',
+            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Willkommen bei Millionaire Monkeys. In diesem Spiel geht es darum, Fragen zu verschiedenen Fähigkeiten zu lösen. Sie erhalten 15 Fragen und 3 Lebenslinien, die Ihnen beim Spielen helfen. Um ein neues Spiel zu starten, können Sie "Neues Spiel starten" sagen, um eine Gruppe zu starten oder um in einer Gruppe zu spielen, sagen Sie "Neue Gruppe erstellen" oder "In vorhandener Gruppe spielen", gefolgt von "Gruppenname" oder "Hören" Sagen Sie zu den Lebenslinien in diesem Spiel "Lebenslinien". Wenn Sie Hilfe benötigen, sagen Sie \ "Hilf mir \" ... Also, bei was kann ich Ihnen helfen?</lang></voice>',
+            WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Willkommen zurück bei Millionaire Monkeys. Um das vorherige Spiel fortzusetzen, sagen Sie "Spiel fortsetzen", oder um ein neues Spiel zu starten, sagen Sie "Neues Spiel starten", oder spielen Sie in einer Gruppe, sagen Sie "Neue Gruppe erstellen" oder "In bestehender Gruppe spielen".  Wenn Sie Hilfe benötigen, sagen Sie \ "Hilf mir \" ... Also, bei was kann ich Ihnen helfen?</lang></voice>',
             WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Das habe ich nicht verstanden. Womit kann ich dir helfen?</lang></voice>',
             GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Auf Wiedersehen! Danke, dass du Millionaire Monkeys spielst</lang></voice>',
             REFLECTOR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sie haben gerade ausgelöst {{intentName}}</lang></voice>',
@@ -69,7 +69,7 @@ module.exports = {
             START_QUIZ_MESSAGE: '<voice name="Brian"><lang xml:lang="en-GB"> OKAY. Beginnen wir mit Millionaire Monkeys. </lang></voice>',
             CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> Beim Stornieren dieses Kaufs ist ein Problem aufgetreten. Bitte versuchen Sie es später noch einmal</lang></voice>',
             ERROR_QUESTION_FETCH: '<voice name="Brian"><lang xml:lang="en-GB"> Beim Abrufen der Fragen ist ein Fehler aufgetreten. Sagen Sie bitte "Spiel fortsetzen" oder starten Sie ein neues Spiel, um fortzufahren! Oder Bitte versuchen Sie es später noch einmal</lang></voice>',
-            QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> Um die Frage zu beantworten, sagen Sie bitte Antwort ist und dann Ihre Antwort ..... Hier ist Ihre Frage, die jetzt auftaucht. </lang></voice>',
+            QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> Um die Frage zu beantworten, sagen Sie bitte, Antwort ist, und dann Ihre Antwort ..... Hier ist Ihre Frage, die jetzt auftaucht. </lang></voice>',
             ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> Glückwunsch! Sie haben alle Fragen beantwortet. Gut gemacht!</lang></voice>',
             QUESTIONS_ANSWERED_CORRECTLY: '<voice name="Brian"><lang xml:lang="en-GB"> Das ist die richtige Antwort. </lang></voice>',
             QUESTIONS_ANSWERED_WORNG: '<voice name="Brian"><lang xml:lang="en-GB"> ACH NEIN! Dies ist die falsche Antwort ...... </lang></voice>',
@@ -85,7 +85,7 @@ module.exports = {
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Hier sind die beiden Optionen für Ihre Frage. </lang></voice>',
             EXPERT_REVIEW_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Dies ist, was der Experte zu Ihrer Frage zu sagen hat. </lang></voice>',
             LIFE_LINE_ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Entschuldigung, du kannst diese Lebenslinie nur benutzen, wenn dein Spiel läuft. Bitte setze das Spiel fort oder starte ein neues, um deine Lebenslinien zu nutzen. </lang></voice>',
-            LIFE_LINE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Du hast noch {{lifeLinesLeft}} Linienlinien übrig. </lang></voice>',
+            LIFE_LINE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Du hast noch {{lifeLinesLeft}} Lebenslinien übrig. </lang></voice>',
             LIFE_LINE_EXHAUSTED: '<voice name="Brian"><lang xml:lang="en-GB"> Entschuldigung, Sie haben die Lebenslinie {{lifeLineName}} bereits verwendet. Bitte verwenden Sie eine andere Lebensader. </lang></voice>',
             LIFE_LINES_SATUS: '<voice name="Brian"><lang xml:lang="en-GB"> Um über andere Lebenslinien Bescheid zu wissen, geben Sie meinen Lebenslinien- oder Lebenslinienstatus an. </lang></voice>',
             CURRENT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB">Hier ist deine aktuelle Frage {{currentQuestion}} </lang></voice>',

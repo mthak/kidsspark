@@ -4,8 +4,8 @@
       "locales": {
         "en-US": {
           "name": "millionaire monkeys",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "summary": "Welcome to Millionaire Monkeys. This game is about solving questions on various skills in a fun way with life lines to help.",
+          "description": "Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say start new game, to start a group or play in an existing group say create a new group or play in existing group followed by Group Name  or to hear about the Life Lines in this game, say Life Lines. For help, say , Help me",
           "examplePhrases": [
             "open millionaire monkeys",
             "ask millionaire monkeys",
@@ -15,8 +15,8 @@
         },
         "en-GB": {
           "name": "millionaire monkeys",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "summary": "Welcome to Millionaire Monkeys. This game is about solving questions on various skills in a fun way with life lines to help.",
+          "description": "Welcome to Millionaire Monkeys. This game is about solving questions on various skills. You will get 15 questions and 3 life lines to help you while playing. To start a new game you can say start new game, to start a group or play in an existing group say create a new group or play in existing group followed by Group Name  or to hear about the Life Lines in this game, say Life Lines. For help, say , Help me",
           "examplePhrases": [
             "open millionaire monkeys",
             "ask millionaire monkeys",
@@ -26,8 +26,8 @@
         },
         "ja-JP": {
           "name": "millionaire monkeys",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "summary": "Mirioneamonkīzu e yōkoso. Kono gēmu wa, samazamana sukiru ni kansuru shitsumon o, raifurain ga yakudatsu tanoshī hōhō de kaiketsu suru koto o mokuteki to shite imasu.",
+          "description": "Mirioneamonkīzu e yōkoso. Kono gēmu wa, samazamana sukiru ni kansuru shitsumon o kaiketsu suru monodesu. Purei-chū ni yakudatsu 15 no shitsumon to 3ttsu no raifurain ga arimasu. Atarashī gēmu o kaishi suru ni wa, atarashī gēmu o kaishi, kizon no gurūpu de gurūpu o kaishi, matawa purei suru ni wa, atarashī gurūpu o sakusei suru ka, kizon no gurūpu de gurūpu-mei o nyūryoku shite saisei suru ka, kono gēmu no raifurain ni tsuite, tatoeba raifurain. Herupu ni tsuite wa, iu, tasukete",
           "examplePhrases": [
             "開いた millionaire monkeys",
             "尋ねる millionaire monkeys",
@@ -37,8 +37,8 @@
         },
         "de-DE": {
           "name": "millionaire monkeys",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "summary": "Willkommen bei Millionaire Monkeys. In diesem Spiel geht es darum, auf spielerische Weise Fragen zu verschiedenen Fertigkeiten zu lösen und dabei die Lebenslinien zu unterstützen.",
+          "description": "Willkommen bei Millionaire Monkeys. In diesem Spiel geht es darum, Fragen zu verschiedenen Fähigkeiten zu lösen. Sie erhalten 15 Fragen und 3 Lebenslinien, die Ihnen beim Spielen helfen. Um ein neues Spiel zu starten, können Sie sagen, dass Sie ein neues Spiel starten, eine Gruppe starten oder in einer vorhandenen Gruppe spielen möchten, indem Sie eine neue Gruppe erstellen oder in einer vorhandenen Gruppe spielen, gefolgt von Gruppenname, oder wenn Sie Informationen zu den Lebenslinien in diesem Spiel erhalten möchten, sagen Sie Lebenslinien . Sagen Sie, um Hilfe zu erhalten, Helfen Sie mir",
           "examplePhrases": [
             "offene millionaire monkeys",
             "Fragen millionaire monkeys",

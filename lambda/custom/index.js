@@ -82,9 +82,9 @@ const GroupNameHandler = {
         const { request } = handlerInput.requestEnvelope;
         return request.type === 'IntentRequest' && request.intent.name === 'GroupNameIntent';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         console.log("GroupNameIntent: handle");
-        var sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const locale = handlerInput.requestEnvelope.request.locale;
         const response = handlerInput.responseBuilder;
         var speakOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
@@ -228,13 +228,13 @@ const ScoreHandler = {
 
             var lifeLinesLeft = "";
             if(sessionAttributes.fiftyFityUsed === false)
-                lifeLinesLeft = " fifty ffity, " + lifeLinesLeft;
+                lifeLinesLeft = " fifty fifty, " + lifeLinesLeft;
             if(sessionAttributes.expertReviewUsed === false)
                 lifeLinesLeft = " expert review, " + lifeLinesLeft;
             if(sessionAttributes.glideOptionUsed === false)
                 lifeLinesLeft = " glide , " + lifeLinesLeft;
                 
-            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            speakOutput = handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
             repromt = handlerInput.t('START_GAME_MSG');
 
         } else {
@@ -264,7 +264,7 @@ const LifeLineHandler = {
 
             var lifeLinesLeft = "";
             if(sessionAttributes.fiftyFityUsed === false)
-                lifeLinesLeft = " fifty ffity, " + lifeLinesLeft;
+                lifeLinesLeft = " fifty fifty, " + lifeLinesLeft;
             if(sessionAttributes.expertReviewUsed === false)
                 lifeLinesLeft = " expert review, " + lifeLinesLeft;
             if(sessionAttributes.glideOptionUsed === false)
@@ -368,12 +368,13 @@ const QuizResponseHandler = {
             console.log("currentQuestion.points "  + JSON.stringify(sessionAttributes));
             sessionAttributes.state = states.INPROGRESS;
             sessionAttributes.quizScore = sessionAttributes.quizScore + currentQuestion.points;
+            sessionAttributes.questionCounter = sessionAttributes.questionCounter + 1;
             
             //TODO add isQuestionAsked to notify that question was true
             console.log("QuizResponseHandler ASKING AGAIN");
             sessionAttributes = markQuestionCompleted(sessionAttributes.currentQuestion.id, sessionAttributes, true);
             //invalidating the current question
-            sessionAttributes.currentQuestion = null;
+            // sessionAttributes.currentQuestion = null;
 
             //Asking new question
             const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
@@ -434,14 +435,13 @@ function generatePresentableQuestion(questions, handlerInput) {
             break;
         }
     }
-  	console.info("generatePresentableQuestion: currentQuestion");
-  	console.info(JSON.stringify(currentQuestion));
+  	
     var conversationString = handlerInput.t('ERROR_QUESTION_FETCH');
     
     if(currentQuestion != null) {
         console.info("generatePresentableQuestion: counting questions");
-        
-        return  [handlerInput.t('QUESTION_BEGIN') + currentQuestion.ques, currentQuestion.ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
+        let ques = '<voice name="Brian"><lang xml:lang="en-GB">' + currentQuestion.ques + '</lang></voice>';
+        return  [handlerInput.t('QUESTION_BEGIN') + ques, ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
     } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
         sessionAttributes.currentQuestion = null;
@@ -454,7 +454,7 @@ async function fetchAllQuestions(group, locale) {
     //TODO the api call
     const fetchedQuestion = await Promise.resolve(apiservice.getKbcQuestions(group, locale)).then((response) => {
         
-        const sortedQuestions = sortBy( response, 'points' );
+        const sortedQuestions = sortBy( response.data, 'points' );
         console.log(sortedQuestions);
         return sortedQuestions;
 

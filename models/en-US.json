@@ -246,6 +246,8 @@
                 {
                     "name": "ScoreIntent",
                     "samples": [
+                      "score",
+                      "tell my score",
                       "what is my score",
                       "what is my current score",
                       "my score",

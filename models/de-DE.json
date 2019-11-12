@@ -92,16 +92,16 @@
                         "type": "AMAZON.SearchQuery"
                     }],
                     "samples": [
-                       "neuer Gruppenname {Gruppenname}",
-                        "neue Gruppe {Gruppenname}",
+                       "neuer groupName {groupName}",
+                        "neue Gruppe {groupName}",
                         "Erstelle eine neue Gruppe {groupName}",
-                        "eine neue Gruppe {Gruppenname} erstellen",
+                        "eine neue Gruppe {groupName} erstellen",
                         "Erstelle eine neue Gruppe mit dem Namen {groupName}",
-                        "neuen Gruppennamen {Gruppenname} erstellen",
+                        "neuen groupNamen {groupName} erstellen",
                          "eine neue {groupName} Gruppe erstellen",
                         "Erstelle eine Gruppe {groupName}",
                         "Erstelle eine Gruppe mit dem Namen {groupName}",
-                         "einen Gruppennamen {Gruppenname} erstellen",
+                         "einen groupNamen {groupName} erstellen",
                         "Erstelle eine {groupName} Gruppe",
                         "{groupName} Gruppe erstellen",
                         "will mit {groupName} spielen",
@@ -110,8 +110,8 @@
                         "will mit {groupName} konkurrieren",
                         "möchte mit {groupName} group konkurrieren",
                         "In bestehender Gruppe {groupName} spielen",
-                        "vorhandene Gruppe {Gruppenname} Gruppe",
-                        "vorhandene Gruppe {Gruppenname}",
+                        "vorhandene Gruppe {groupName} Gruppe",
+                        "vorhandene Gruppe {groupName}",
                         "spiele mit bestehender Gruppe {groupName}",
                         "spiele {groupName} Gruppe",
                         "In Gruppe {groupName} spielen"
@@ -212,12 +212,12 @@
                     }],
                     "samples": [
                         "antwort ist {phrase}",
-                        "Ich denke, {phrase}",
+                        "Ich denke {phrase}",
                         "Ich würde mich für {phrase} entscheiden",
                         "die richtige Antwort ist {phrase}",
                         "richtige Antwort ist {phrase}",
-                        "eine Phrase}",
-                        "der Satz}",
+                        "eine {phrase}",
+                        "der {phrase}",
                         "die Antwort ist {phrase}",
                         "ist es {phrase}",
                         "es ist {phrase}",
@@ -227,7 +227,7 @@
                         "ich denke es war {phrase}",
                         "ich denke es könnte {phrase} sein",
                         "Ich denke die Antwort ist {phrase}",
-                        "Ich denke, die Antwort könnte {phrase} sein."
+                        "Ich denke die Antwort könnte {phrase} sein."
                     ]
                 },
                 {

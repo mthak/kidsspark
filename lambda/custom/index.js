@@ -15,7 +15,8 @@ const states = {
     START: `_START`,
     QUIZ: `_QUIZ`,
     INPROGRESS: `_IN_PROGRESS`,
-    ANSWER: `ANSWER`
+    ANSWER: `_ANSWER`,
+    GROUP_INIT: `_GROUP_INIT`
   };
 
 const LaunchRequestHandler = {
@@ -74,6 +75,69 @@ const ResumeHandler = {
                      .getResponse();
     },
 };
+
+const GroupNameHandler = {
+    canHandle(handlerInput) {
+        console.log('GroupNameIntent: canHandle');
+        const { request } = handlerInput.requestEnvelope;
+        return request.type === 'IntentRequest' && request.intent.name === 'GroupNameIntent';
+    },
+    handle(handlerInput) {
+        console.log("GroupNameIntent: handle");
+        var sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const locale = handlerInput.requestEnvelope.request.locale;
+        const response = handlerInput.responseBuilder;
+        var speakOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
+        var repeatOutput = handlerInput.t('DEFAULT_GAME_NAME_MSG');
+        const phrase = handlerInput.requestEnvelope.request.intent.slots.phrase.value;
+        sessionAttributes.gameMode = "GROUP";
+        sessionAttributes.groupName = phrase;
+        sessionAttributes.state = states.GROUP_INIT;
+
+        const [doesGroupNameExists, questions] = await validateGroupExists(phrase, locale);
+        
+        if (questions == undefined || questions == null) {
+            return response.speak(handlerInput.t('DEFAULT_GAME_NAME_MSG'))
+                     .reprompt(handlerInput.t('ERROR_CREATING_GROUP_REPEAT'))
+                     .withShouldEndSession(false)
+                     .getResponse();
+        }
+
+        if (doesGroupNameExists) {
+           
+            speakOutput = handlerInput.t('GROUP_ALREADY_EXISTS');
+            repeatOutput = handlerInput.t('GROUP_ALREADY_EXISTS_REPROMPT');
+           
+        } else {
+            speakOutput = handlerInput.t('GROUP_ALREADY_EXISTS');
+            repeatOutput = handlerInput.t('GROUP_ALREADY_EXISTS_REPROMPT');
+       
+        }
+        sessionAttributes.gameQuestions = questions;
+        //Resetting every field as this is the start of new game
+        resetGameState(sessionAttributes, questions);
+
+        return response.speak(speakOutput)
+                     .reprompt(repeatOutput)
+                     .withShouldEndSession(false)
+                     .getResponse();
+    },
+};
+
+async function validateGroupExists(group, locale) {
+    //TODO the api call
+    const doesGroupNameExists = await Promise.resolve(apiservice.getKbcQuestions(group, locale)).then((response) => {
+        if (response.message == "undefined" || response.message == "existing" || response.message == null) {
+            return [true, response.data];
+        } else {
+            return [false, response.data];
+        }
+      }).catch((error) => {
+        console.error("*****************ERROR Calling Question Api ***************** " + error);
+        return [false, null];
+    });
+    return doesGroupNameExists;
+}
 
 const FiftyFiftyHandler = {
     canHandle(handlerInput) {
@@ -232,24 +296,25 @@ const QuizHandler = {
     async handle(handlerInput) {
       console.log("GAME.QuizHandler: handle");
       const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+      const locale = handlerInput.requestEnvelope.request.locale;
       const response = handlerInput.responseBuilder;
       var questions = null;
 
-      if (sessionAttributes.state == states.START) {
-            questions = await fetchAllQuestions();
-            console.error("*****************GOT QUESTIONS ***************** ");
-            //Resetting every field as this is the start of new game
+      if(sessionAttributes.gameMode == undefined || sessionAttributes.gameMode == null) {
+        sessionAttributes.gameMode = "SINGLE";
+      }
+
+      if (sessionAttributes.state == states.START || sessionAttributes.state != states.GROUP_INIT) {
+            questions = await fetchAllQuestions("easy", locale);
             sessionAttributes.gameQuestions = questions;
-            sessionAttributes.fiftyFityUsed = false;
-            sessionAttributes.expertReviewUsed = false;
-            sessionAttributes.glideOptionUsed = false;
-            sessionAttributes.quizScore = 0;
-            console.error("*****************ADDED QUESTIONS IN SESSION***************** ");
+            console.error("*****************GOT FRESH QUESTIONS ***************** ");
+            //Resetting every field as this is the start of new game
+            resetGameState(sessionAttributes, questions);
+
         } else if (sessionAttributes.gameQuestions != null) {
             questions = sessionAttributes.gameQuestions
             console.error("*****************FETCHING QUESTIONS FROM SESSION***************** ");
        }
-
 
       if (questions == null) {
         return response.speak(handlerInput.t('ERROR_QUESTION_FETCH'))
@@ -269,6 +334,14 @@ const QuizHandler = {
       }
     },
 };
+
+function resetGameState(sessionAttributes) {
+    console.log("Re-setting the session attributes");
+    sessionAttributes.fiftyFityUsed = false;
+    sessionAttributes.expertReviewUsed = false;
+    sessionAttributes.glideOptionUsed = false;
+    sessionAttributes.quizScore = 0;
+}
 
 const QuizResponseHandler = {
     canHandle(handlerInput) {
@@ -377,11 +450,10 @@ function generatePresentableQuestion(questions, handlerInput) {
     return [conversationString, conversationString, currentQuestion];
 }
 
-async function fetchAllQuestions() {
+async function fetchAllQuestions(group, locale) {
     //TODO the api call
-    const fetchedQuestion = await Promise.resolve(apiservice.getKbcQuestions("first", 1)).then((response) => {
-        // console.error("*****************SUCCESS Calling Question Api ***************** " + JSON.stringify(response));
-        // console.error("*****************SORTING CALLING QUESTIONS ***************** ");
+    const fetchedQuestion = await Promise.resolve(apiservice.getKbcQuestions(group, locale)).then((response) => {
+        
         const sortedQuestions = sortBy( response, 'points' );
         console.log(sortedQuestions);
         return sortedQuestions;
@@ -648,7 +720,7 @@ const ErrorHandler = {
         return true;
     },
     handle(handlerInput, error) {
-        const speakOutput = handlerInput.t('ERROR_MSG');
+        const speakOutput = handlerInput.t('ERROR_MSG') + handlerInput.t('START_GAME_MSG');
         console.log(`~~~~ Error handled: ${JSON.stringify(error)}`);
 
         return handlerInput.responseBuilder
@@ -767,6 +839,7 @@ exports.handler = Alexa.SkillBuilders.standard()
         LaunchRequestHandler,
         QuizHandler,
         QuizResponseHandler,
+        GroupNameHandler,
         FiftyFiftyHandler,
         ExpertReviewHandler,
         ScoreHandler,

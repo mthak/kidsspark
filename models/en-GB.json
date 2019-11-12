@@ -1,9 +1,8 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hello world",
-            "intents": [
-                {
+            "invocationName": "millionaire monkeys",
+            "intents": [{
                     "name": "AMAZON.CancelIntent",
                     "samples": []
                 },
@@ -16,16 +15,218 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "QuizIntent",
                     "slots": [],
                     "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
+                        "Spiel beginnen",
+                        "Starte ein neues Spiel",
+                        "neues Spiel starten",
+                        "starte ein Spiel",
+                        "Starte das Spiel jetzt",
+                        "Starte das Spiel",
+                        "Starte das Spiel",
+                        "Lass uns anfangen",
+                        "Lass uns ein Spiel beginnen",
+                        "Lass uns das Spiel beginnen",
+                        "Start",
+                        "Singlemode-Spiel starten",
+                        "Single-Mode-Spiel",
+                        "Einspielermodus",
+                        "Spiel beginnen",
+                        "Beginne das Spiel",
+                        "setze das Spiel fort",
+                        "weiterspielen",
+                        "Lass uns das Spiel fortsetzen",
+                        "Lass uns das Spiel fortsetzen",
+                        "Lass uns das Spiel fortsetzen",
+                        "Lass uns mit dem Spiel fortfahren",
+                        "lass uns weitermachen",
+                        "Lass uns mit dem Spiel fortfahren",
+                        "Lass uns weitermachen",
+                        "Lass uns mit dem Spiel fortfahren",
+                        "Lass uns weitermachen",
+                        "Anfang",
+                        "Lass uns was spielen",
+                        "Lasst uns ein Spiel spielen",
+                        "lass uns das Spiel spielen",
+                        "Lassen Sie uns ein Spiel spielen",
+                        "Lass uns was spielen",
+                        "Lasst uns ein Spiel spielen",
+                        "lass uns das Spiel spielen",
+                        "Lassen Sie uns ein Spiel spielen",
+                        "Lass uns spielen",
+                        "Lass uns spielen",
+                        "Lass uns das Spiel spielen",
+                        "Lass uns ein Spiel spielen",
+                        "Spiel starten",
+                        "abspielen",
+                        "ein Spiel zu spielen",
+                        "das Spiel spielen"
+                    ]
+                },
+                {
+                    "name": "GameRulesIntent",
+                    "slots": [],
+                    "samples": [
+                        "Spielregeln",
+                        "Geschicklichkeitsregeln",
+                        "Wie lauten die Regeln",
+                        "Was für ein Spiel ist es",
+                        "Regeln",
+                        "Spielanleitung",
+                        "wie man dieses Spiel spielt",
+                        "Erzähl mir von diesem Spiel",
+                        "wie man diese Fähigkeit spielt"
+                    ]
+                },
+                {
+                    "name": "GroupNameIntent",
+                    "slots": [{
+                        "name": "groupName",
+                        "type": "AMAZON.SearchQuery"
+                    }],
+                    "samples": [
+                        "neuer Gruppenname {Gruppenname}",
+                        "neue Gruppe {Gruppenname}",
+                        "eine neue Gruppe {Gruppenname} erstellen",
+                        "Erstelle eine neue Gruppe mit dem Namen {groupName}",
+                        "neuen Gruppennamen {Gruppenname} erstellen",
+                        "eine neue {groupName} Gruppe erstellen",
+                        "mit neuer Gruppe {Gruppenname} beginnen",
+                        "Neue Gruppe starten {groupName}",
+                        "Erstelle eine Gruppe {groupName}",
+                        "Erstelle eine Gruppe mit dem Namen {groupName}",
+                        "einen Gruppennamen {Gruppenname} erstellen",
+                        "Erstelle eine {groupName} Gruppe",
+                        "{groupName} Gruppe erstellen",
+                        "will mit {groupName} spielen",
+                        "möchte in {groupName} spielen",
+                        "um {groupName} spielen wollen",
+                        "will mit {groupName} konkurrieren",
+                        "möchte mit {groupName} group konkurrieren",
+                        "konkurriere mit {groupName}",
+                        "Beginne mit {groupName}",
+                        "konkurriere mit {groupName} group",
+                        "In bestehender Gruppe {groupName} spielen",
+                        "vorhandene Gruppe {Gruppenname} Gruppe",
+                        "vorhandene Gruppe {Gruppenname}",
+                        "spiele mit bestehender Gruppe {groupName}",
+                        "spiele {groupName}",
+                        "spiele {groupName} Gruppe",
+                        "In Gruppe {groupName} spielen"
+                    ]
+                },
+                {
+                    "name": "LifeLineIntent",
+                    "slots": [],
+                    "samples": [
+                        "Lebensader",
+                        "Lebenslinien",
+                        "meine Lebenslinien",
+                        "meine Lebenslinie",
+                        "Was sind meine Lebenslinien",
+                        "Was ist meine Lebensader",
+                        "Wie viele Lebenslinien sind noch übrig",
+                        "wie viele Lebensader übrig",
+                        "Lebenslinienstatus",
+                        "Lebenslinien Status",
+                        "Mein Lebenslinienstatus",
+                        "mein Lebenslinienstatus",
+                        "Erzähl mir von meinen Lebenslinien",
+                        "Erzählen Sie mehr über Lebenslinien",
+                        "Erzählen Sie mehr über die Lebenslinien",
+                        "Erzähl mir von meiner Lebensader",
+                        "Erzählen Sie mehr über die Lebensader",
+                        "Erzählen Sie mehr über die Lebensader"
+                    ]
+                },
+                {
+                    "name": "FiftyFiftyIntent",
+                    "slots": [],
+                    "samples": [
+                        "benutze Fünfzig Fünfzig Lebenslinie",
+                        "benutze fünfzig fünfzig",
+                        "Erste Lebenslinie benutzen",
+                        "benutze die richtige falsche Lebenslinie",
+                        "Ok fünfzig fünfzig Lebensader",
+                        "ok fünfzig fünfzig",
+                        "Fünfzig-Fünfzig",
+                        "Ich möchte Fifty Fifty Life Line verwenden",
+                        "Ich möchte die erste Lebenslinie verwenden",
+                        "Ich möchte Fifty Fifty verwenden",
+                        "Ich werde für fünfzig fünfzig Lebensader gehen",
+                        "Ich werde für die erste Lebenslinie gehen",
+                        "Ich werde für fünfzig fünfzig gehen",
+                        "Ich würde für fünfzig fünfzig Lebensader gehen",
+                        "Ich würde für die erste Lebenslinie gehen",
+                        "Ich würde für fünfzig fünfzig gehen"
+                    ]
+                },
+                {
+                    "name": "ExpertReviewIntent",
+                    "slots": [],
+                    "samples": [
+                        "Use Expert Review Line",
+                        "Verwenden Sie die Lebensader von Expert Review",
+                        "Verwenden Sie Expert Review",
+                        "zweite Lebenslinie verwenden",
+                        "Use Review Life Line",
+                        "Verwenden Sie Expert Lebenslinie",
+                        "ok Expert Review",
+                        "Expert Review",
+                        "Ich möchte die Lebenslinie Expert Review verwenden",
+                        "Ich möchte die zweite Lebenslinie verwenden",
+                        "Ich möchte Expert Review verwenden",
+                        "Ich werde für Expert Review Lebenslinie gehen",
+                        "Ich werde für die zweite Lebenslinie gehen",
+                        "Ich werde für Expert Review gehen",
+                        "Ich würde mich für Expert Review entscheiden",
+                        "Ich würde mich für die zweite Lebenslinie entscheiden",
+                        "Ich würde für Expert Review gehen"
+                    ]
+                },
+                {
+                    "name": "ResumeIntent",
+                    "slots": [],
+                    "samples": ["vorheriges Spiel",
+                        "Spiel fortsetzen",
+                        "setze das Spiel fort",
+                        "setze das vorherige Spiel fort",
+                        "Vorheriges Spiel fortsetzen",
+                        "vorheriges Spiel starten",
+                        "vorheriges Spiel",
+                        "Altes Spiel spielen"
+
+                    ]
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": []
+                },
+                {
+                    "name": "QuizAnswerIntent",
+                    "slots": [{
+                        "name": "phrase",
+                        "type": "AMAZON.SearchQuery"
+                    }],
+                    "samples": [
+                        "antwort ist {phrase}",
+                        "Ich denke, {phrase}",
+                        "Ich würde mich für {phrase} entscheiden",
+                        "die richtige Antwort ist {phrase}",
+                        "richtige Antwort ist {phrase}",
+                        "eine Phrase}",
+                        "der Satz}",
+                        "die Antwort ist {phrase}",
+                        "ist es {phrase}",
+                        "es ist {phrase}",
+                        "es war {phrase}",
+                        "es könnte {phrase} sein",
+                        "ich denke es ist {phrase}",
+                        "ich denke es war {phrase}",
+                        "ich denke es könnte {phrase} sein",
+                        "Ich denke die Antwort ist {phrase}",
+                        "Ich denke, die Antwort könnte {phrase} sein."
                     ]
                 },
                 {
@@ -35,9 +236,82 @@
                 {
                     "name": "AMAZON.FallbackIntent",
                     "samples": []
+                },
+                {
+                    "name": "ScoreIntent",
+                    "samples": [
+                        "Was ist meine Punktzahl",
+                        "Was ist meine aktuelle Punktzahl",
+                        "meine Punktzahl",
+                        "meine Gäste plese",
+                        "wie viele Punkte",
+                        "meine Punkte",
+                        "alle punkte"
+                    ],
+                    "slots": []
+                },
+                {
+                    "name": "BuyIntent",
+                    "samples": [
+                        "{ProductName} kaufen",
+                        "{ProductName} kaufen",
+                        "möchte {ProductName}",
+                        "möchte {ProductName} kaufen",
+                        "{ProductName} Lebensader kaufen",
+                        "{ProductName} Lebensader kaufen",
+                        "möchte {ProductName} Lebensader kaufen",
+                        "möchte {ProductName} Lebensader",
+                        "möchte {ProductName} kaufen",
+                        "möchte {ProductName}",
+                        "{ProductName} Lebenslinie erhalten",
+                        "get {ProductName}",
+                        "Holen Sie sich die {ProductName} Lebensader",
+                        "Holen Sie sich den {ProductName}"
+                    ],
+                    "slots": [{
+                        "name": "ProductName",
+                        "type": "LIST_OF_LIFELINE_NAMES"
+                    }]
+                },
+                {
+                    "name": "CancelPurchaseIntent",
+                    "slots": [],
+                    "samples": [
+                        "storniere meinen Einkauf",
+                        "Kauf abbrechen",
+                        "Rückgabe meines Kaufs",
+                        "Rückkauf",
+                        "Rückerstattung meines Kaufs",
+                        "Kauf erstatten",
+                        "Rückerstattung meiner Transaktion",
+                        "Rückerstattung Transaktion",
+                        "Transaktion abbrechen",
+                        "storniere meine Transaktion"
+                    ]
                 }
             ],
-            "types": []
+            "types": [{
+                "name": "LIST_OF_LIFELINE_NAMES",
+                "values": [{
+                        "id": "glide",
+                        "name": {
+                            "value": "glide"
+                        }
+                    },
+                    {
+                        "id": "jump",
+                        "name": {
+                            "value": "jump"
+                        }
+                    },
+                    {
+                        "id": "fly",
+                        "name": {
+                            "value": "fly"
+                        }
+                    }
+                ]
+            }]
         }
     }
 }

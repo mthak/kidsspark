@@ -26,12 +26,11 @@
         },
         "de-DE": {
           "name": "millionaire monkeys",
-          "summary": "Mirioneamonkīzu e yōkoso. Kono gēmu wa, samazamana sukiru ni kansuru shitsumon o kaiketsu suru monodesu.",
-          "description": "Mirioneamonkīzu e yōkoso. Kono gēmu wa, samazamana sukiru ni kansuru shitsumon o kaiketsu suru monodesu.",
+          "summary": "Willkommen bei Millionaire Monkeys. ",
+          "description": "Willkommen bei Millionaire Monkeys. ",
           "examplePhrases": [
-            "Alexa offene millionaire monkeys",
-            "Alexa Fragen millionaire monkeys",
-            "Alexa starten millionaire monkeys"
+            "Alexa, frag millionaire monkeys",
+            "Alexa, starte millionaire monkeys"
           ],
           "keywords": []
         }
@@ -39,7 +38,7 @@
       "isAvailableWorldwide": true,
       "testingInstructions": "Alexa, open millionaire monkeys",
       "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": []
+      "distributionCountries": ["US", "DE", "GB"]
     },
     "apis": {
       "custom": {

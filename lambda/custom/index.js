@@ -360,12 +360,13 @@ const QuizResponseHandler = {
         var sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         var currentQuestion = sessionAttributes.currentQuestion;
         const response = handlerInput.responseBuilder;
-        var speakOutput = null;
-        var repeatOutput = null;
+        var speakOutput = handlerInput.t('ERROR_MSG') + handlerInput.t('START_GAME_MSG');
+        var repeatOutput = handlerInput.t('ERROR_MSG') + handlerInput.t('START_GAME_MSG');
         const phrase = handlerInput.requestEnvelope.request.intent.slots.phrase.value;
         
         if(currentQuestion == undefined || currentQuestion == null) {
             speakOutput =  handlerInput.t('ERROR_QUESTION_FETCH');
+            repeatOutput =  handlerInput.t('ERROR_QUESTION_FETCH');
 
         } else if (phrase.includes(currentQuestion.answer)) {
             console.log("QuizResponseHandler ANSWER is CORRECT");

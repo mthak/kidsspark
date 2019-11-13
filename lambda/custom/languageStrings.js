@@ -104,54 +104,5 @@ module.exports = {
             GROUP_NOT_EXISTS: '<voice name="Brian"><lang xml:lang="en-GB"> Vielen Dank, dass Sie eine neue Gruppe für Ihr Spiel erstellt haben. Bitte sagen Sie, um das Spiel zu starten, starten Sie das Spiel. </lang></voice>',
             GROUP_NOT_EXISTS_REPROMPT: '<voice name="Brian"><lang xml:lang="en-GB"> Bitte sagen Sie, starten Sie, das Spiel, um zu spielen.  </lang></voice>'
         }
-    },
-    ja: {
-        translation: {
-            WELCOME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> ミリオネアモンキーズへようこそ。このゲームは、さまざまなスキルに関する質問を解決するものです。プレイ中に役立つ15の質問と3つのライフラインがあります。新しいゲームを開始するには、言う、新しいゲームを開始する、グループを開始する、またはグループでプレイする、たとえば、新しいグループを作成してからグループ名を付ける、または既存のグループでプレイしてからグループ名を付けることができます。このゲームのライフラインについて聞くには、ライフラインと言ってください。ヘルプについては、「助けて」と言ってください。だから、私は何であなたを助けることができますか？</lang></voice>',
-            WELCOME_BACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> ミリオネアモンキーズへようこそ。前のゲームを再開するには、ゲームを再開してください。新しいゲームを開始するには、たとえば、新しいゲームを開始します。たとえば、グループでプレイするには、新しいグループを作成してからグループ名を入力するか、既存のグループでプレイしてからグループ名を入力します。ヘルプについては、「助けて」と言ってください。だから、私は何であなたを助けることができますか？</lang></voice>',
-            WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 聞き取れませんでした。私は何であなたを助けることができますか？</lang></voice>',
-            GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> さようなら！ミリオネアモンキーズをプレイしていただきありがとうございます</lang></voice>',
-            REFLECTOR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> あなたはちょうどトリガーしました{{intentName}}</lang></voice>',
-            FALLBACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 申し訳ありませんが、それについては知りません。もう一度試してください。</lang></voice>',
-            ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 申し訳ありませんが、私はあなたが尋ねたことをするのに苦労しました。もう一度試してください。</lang></voice>',
-            CANNOT_BUY_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> その名前の製品があるとは思わない。再試行できますか？</lang></voice>',
-            START_QUIZ_MESSAGE: '<voice name="Brian"><lang xml:lang="en-GB"> さぁ、始めよう 。 Millionaire Monkeys . </lang></voice>',
-            CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> この購入のキャンセル中に問題が発生しました。しばらくしてからもう一度お試しください。</lang></voice>',
-            ERROR_QUESTION_FETCH: '<voice name="Brian"><lang xml:lang="en-GB"> 質問の取得中にエラーが発生しました。ゲームを再開するか、新しいゲームを開始して続行してください！または、しばらくしてからもう一度お試しください</lang></voice>',
-            QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> 質問に答えるために、答えは、そしてあなたの答えを言ってください、ここにあなたの質問が来ています。 </lang></voice>',
-            ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> おめでとうございます！すべての質問に答えました。あなたは億万長者の猿です。よくやった！  </lang></voice>',
-            QUESTIONS_ANSWERED_CORRECTLY: '<voice name="Brian"><lang xml:lang="en-GB"> これは正しい答えです。 </lang></voice>',
-            QUESTIONS_ANSWERED_WORNG: '<voice name="Brian"><lang xml:lang="en-GB"> 大野！これは間違った答えです。  </lang></voice>',
-            NEXT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB"> 次の質問に進みましょう。 </lang></voice>',
-            QUESTIONS_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> あなたはまだグライドライフラインを購入して使用することができます。この質問をすり抜けたい場合は、GLIDEライフラインを購入してください。 </lang></voice>', 
-            QUESTIONS_CANNOT_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> 残念ながら、以前にGLIDEライフラインを使用したことがあります。このゲームは終了です。新しいゲームを始めてください。 </lang></voice>', 
-            QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 聞き取れませんでした。</lang></voice>' ,
-            HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Fifty Fiftyオプションを使用して、いくつかの答えを1つずつ聞き、もう1つずつ着用することができます。 ' 
-            + ' あなたの別のライフラインの専門家の意見はあなたに正しい答えのためのいくつかのガイダンスを提供することができます。 '
-            + ' GLIDEの3番目のライフラインでは、間違った答えを見つけることができますが、GLIDE PACKを購入する必要があります </lang></voice>',
-            CURRENT_SCORE: '<voice name="Brian"><lang xml:lang="en-GB"> 現在のスコアは{{score}}です。 </lang></voice>',
-            CURRENT_SCORE_ERROR: '<voice name="Brian"><lang xml:lang="en-GB"> ゲームのスコアを知るには、ゲームを再開または開始してください。 </lang></voice>',
-            FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 質問に対する2つのオプションがあります。 </lang></voice>',
-            EXPERT_REVIEW_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> これはあなたの質問について専門家が言わなければならないことです。 </lang></voice>',
-            LIFE_LINE_ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 申し訳ありませんが、このライフラインはゲームの進行中にのみ使用できます。ライフラインを使用するには、新しいゲームを再開または開始してください。 </lang></voice>',
-            LIFE_LINE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> {{lifeLinesLeft}}のライフラインが残っています。 </lang></voice>',
-            LIFE_LINE_EXHAUSTED: '<voice name="Brian"><lang xml:lang="en-GB"> 申し訳ありませんが、{{lifeLineName}}ライフラインを既に使用しています。別のライフラインを使用してください。 </lang></voice>',
-            LIFE_LINES_SATUS: '<voice name="Brian"><lang xml:lang="en-GB"> 他のライフラインについて知るには、私のライフラインまたはライフラインのステータスを言ってください。 </lang></voice>',
-            CURRENT_QUESTION: '<voice name="Brian"><lang xml:lang="en-GB">ここにあなたの現在の質問があります {{currentQuestion}} </lang></voice>',
-            START_GAME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 前のゲームを再開するには「ゲームを再開」と言い、新しいゲームを開始するには「新しいゲームを開始」と言います。ヘルプについては、「助けて」と言ってください。だから、私は何であなたを助けることができますか？</lang></voice>',
-            GAME_RULES_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> このゲームは、さまざまなスキルに関する質問を解決するものです。プレイ中に役立つ15の質問と3つのライフラインがあります。 </lang></voice>',
-            USE_LIFE_LINES: '<voice name="Brian"><lang xml:lang="en-GB"> どの時点でも、フィフティフィフティを使用するか、エキスパートレビューを使用するか、グライドライフラインを購入することができます </lang></voice>',
-            RESUME_ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 再開するゲームはありません。新しいゲームを開始するには、たとえば、新しいゲームを開始します。ヘルプについては、「助けて」と言ってください。だから、私は何であなたを助けることができますか？</lang></voice>',
-            CONSUMABLE_NOT_PURCHASED: '<voice name="Brian"><lang xml:lang="en-GB"> 申し訳ありませんが、グライドは購入されませんでした。 </lang></voice>',
-            THANK_YOU_FOR_BUYING: '<voice name="Brian"><lang xml:lang="en-GB"> グライドライフラインをお買い上げいただきありがとうございます。  {{askQuestion}}  </lang></voice>',
-            CAN_NOT_BUY_CONSUMABLE: '<voice name="Brian"><lang xml:lang="en-GB"> 現在、ヒントを販売できないようです。ごめんなさい。もう一度試すか、新しいゲームを開始してください。</lang></voice>',
-            DEFAULT_GAME_NAME_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> 新しいグループを作成して、プレイするグループを作成してください。または、新しいゲームを開始します</lang></voice>',
-            ERROR_CREATING_GROUP: '<voice name="Brian"><lang xml:lang="en-GB"> グループの作成中にエラーが発生しました。シングルモードゲームをお試しください。シングルモードで開始するには、「シングルモードゲームを開始してください」と言ってください。 </lang></voice>',
-            ERROR_CREATING_GROUP_REPEAT: '<voice name="Brian"><lang xml:lang="en-GB"> シングルモードで開始するには、「シングルモードゲームを開始してください」と言ってください。 </lang></voice>',
-            GROUP_ALREADY_EXISTS: '<voice name="Brian"><lang xml:lang="en-GB">  このグループは既に作成されています。別の名前でグループを作成する場合。新しいグループを作成してください。新しいグループ名が続きます。または、この既存のグループでプレイするには、グループ名に続いて競争します。 </lang></voice>',
-            GROUP_ALREADY_EXISTS_REPROMPT: '<voice name="Brian"><lang xml:lang="en-GB">新しいグループを作成してください。続いて新しいグループ名 </lang></voice>',
-            GROUP_NOT_EXISTS: '<voice name="Brian"><lang xml:lang="en-GB"> ゲーム用の新しいグループを作成していただきありがとうございます。ゲームを開始するには、ゲームを開始してくださいと言ってください。 </lang></voice>',
-            GROUP_NOT_EXISTS_REPROMPT: '<voice name="Brian"><lang xml:lang="en-GB"> ゲームを開始して、プレイを開始してください。  </lang></voice>'
-        }
     }
 }

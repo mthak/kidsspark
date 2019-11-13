@@ -594,6 +594,7 @@ const BuyHintResponseHandler = {
             sessionAttributes.glideOptionUsed = true;
             const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
             sessionAttributes.currentQuestion = newCurrentQuestion;
+            sessionAttributes.state = states.INPROGRESS;
             speakOutput = handlerInput.t('THANK_YOU_FOR_BUYING') + askQuestion;
             repeatOutput = askAgain;
         } else if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ERROR') {

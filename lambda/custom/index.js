@@ -33,12 +33,12 @@ const LaunchRequestHandler = {
 
         if (sessionAttributes.gameQuestions == undefined) {
             return handlerInput.responseBuilder
-                .speak(handlerInput.t('WELCOME_MSG'))
+                .speak('<audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_outro_01"/>' + handlerInput.t('WELCOME_MSG'))
                 .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
                 .getResponse();
         } else {
             return handlerInput.responseBuilder
-                .speak(handlerInput.t('WELCOME_BACK_MSG'))
+                .speak('<audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_outro_01"/>' + handlerInput.t('WELCOME_BACK_MSG'))
                 .reprompt(handlerInput.t('WELCOME_REPROMPT_MSG'))
                 .getResponse();
         }

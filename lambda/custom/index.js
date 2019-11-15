@@ -411,6 +411,13 @@ const QuizResponseHandler = {
             }
         }
 
+        if(sessionAttributes.questionCounter == 15) {
+            return response.speak(speakOutput)
+			         .reprompt(repeatOutput)
+        			 .withShouldEndSession(true)
+                     .getResponse();
+        }
+
         return response.speak(speakOutput)
 			         .reprompt(repeatOutput)
         			 .withShouldEndSession(false)

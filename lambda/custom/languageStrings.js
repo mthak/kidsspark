@@ -29,7 +29,8 @@ module.exports = {
             QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that.</lang></voice>' ,
             HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You can use Fifty  Fifty option to listen to couple of answers one right and another worng. ' 
             + ' Your another life line Expert Opinion can provide you some guidance for the correct answer. '
-            + ' The third life line GLIDE can take you through an incorrect answers, but you need to buy GLIDE PACK </lang></voice>',
+            + ' The third life line GLIDE can take you through an incorrect answers, but you need to buy GLIDE PACK </lang></voice>'
+            + 'To answer your current questions say, answer is, and followed by your answer. Or to start a new game say, start new game. So, What can I help you with?',
             CURRENT_SCORE: '<voice name="Brian"><lang xml:lang="en-GB"> Your current score is {{score}} . </lang></voice>',
             CURRENT_SCORE_ERROR: '<voice name="Brian"><lang xml:lang="en-GB"> Please resume or start a game to know the game score. </lang></voice>',
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Here are the two options for your question. </lang></voice>',
@@ -79,7 +80,8 @@ module.exports = {
             QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Das habe ich nicht verstanden.</lang></voice>' ,
             HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sie können die Option Fifty Fifty verwenden, um ein paar der richtigen und ein anderes Worng-Antworten anzuhören. ' 
             + ' Ihre andere Lebenslinie Expert Opinion kann Ihnen eine Anleitung für die richtige Antwort geben. '
-            + ' Die dritte Lebensader GLIDE kann Sie durch falsche Antworten führen, aber Sie müssen GLIDE PACK kaufen </lang></voice>',
+            + ' Die dritte Lebensader GLIDE kann Sie durch falsche Antworten führen, aber Sie müssen GLIDE PACK kaufen </lang></voice>'
+            + 'Um Ihre aktuellen Fragen zu beantworten, sagen Sie, antworten Sie mit und geben Sie anschließend Ihre Antwort. Oder, um ein neues Spiel zu starten, sagen wir, starten Sie ein neues Spiel. Also, womit kann ich Ihnen helfen?',
             CURRENT_SCORE: '<voice name="Brian"><lang xml:lang="en-GB"> Ihre aktuelle Punktzahl ist {{score}} . </lang></voice>',
             CURRENT_SCORE_ERROR: '<voice name="Brian"><lang xml:lang="en-GB">Bitte setzen Sie das Spiel fort oder starten Sie es, um den Spielstand zu erfahren.</lang></voice>',
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Hier sind die beiden Optionen für Ihre Frage. </lang></voice>',

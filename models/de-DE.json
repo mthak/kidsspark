@@ -167,22 +167,22 @@
                     "name": "ExpertReviewIntent",
                     "slots": [],
                     "samples": [
-                        "Use Expert Review Line",
-                        "Verwenden Sie die Lebensader von Expert Review",
+                        "Verwenden Sie die Expert Review-Zeile",
+                        "Verwenden Sie die Lebenslinie Expert Review",
                         "Verwenden Sie Expert Review",
-                        "zweite Lebenslinie verwenden",
-                        "Use Review Life Line",
-                        "Verwenden Sie Expert Lebenslinie",
-                        "ok Expert Review",
-                        "Expert Review",
+                        "Verwenden Sie die zweite Lebenslinie",
+                        "Verwenden Sie die Überprüfungslebenslinie",
+                        "Verwenden Sie die Expert-Lebenslinie",
+                        "ok Gutachten",
+                        "Expertenbewertung",
                         "Ich möchte die Lebenslinie Expert Review verwenden",
                         "Ich möchte die zweite Lebenslinie verwenden",
                         "Ich möchte Expert Review verwenden",
-                        "Ich werde für Expert Review Lebenslinie gehen",
-                        "Ich werde für die zweite Lebenslinie gehen",
+                        "Ich werde für Expert Review Lebensader gehen",
+                        "Ich werde die zweite Lebenslinie anstreben",
                         "Ich werde für Expert Review gehen",
-                        "Ich würde mich für Expert Review entscheiden",
-                        "Ich würde mich für die zweite Lebenslinie entscheiden",
+                        "Ich würde für Expert Review Lebensader gehen",
+                        "Ich würde die zweite Lebenslinie anstreben",
                         "Ich würde für Expert Review gehen"
                     ]
                 },
@@ -292,25 +292,26 @@
             ],
             "types": [{
                 "name": "LIST_OF_LIFELINE_NAMES",
-                "values": [{
-                        "id": "glide",
-                        "name": {
-                            "value": "glide"
-                        }
+                "values": [
+                    {
+                      "id": "glide",
+                      "name": {
+                        "value": "gleiten"
+                      }
                     },
                     {
-                        "id": "jump",
-                        "name": {
-                            "value": "jump"
-                        }
+                      "id": "jump",
+                      "name": {
+                        "value": "springen"
+                      }
                     },
                     {
-                        "id": "fly",
-                        "name": {
-                            "value": "fly"
-                        }
+                      "id": "fly",
+                      "name": {
+                        "value": "fliegen"
+                      }
                     }
-                ]
+                  ]
             }]
         }
     }

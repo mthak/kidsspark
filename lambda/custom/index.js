@@ -539,15 +539,16 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
 
 const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
     canHandle(handlerInput) {
+        console.log('IN: CancelPurchaseHandler.canHandle');
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name === 'CancelPurchaseIntent';
     },
     async handle(handlerInput) {
         // SAVING SESSION ATTRIBUTES TO PERSISTENT ATTRIBUTES,
         // BECAUSE THE SESSION EXPIRES WHEN WE START A CONNECTIONS DIRECTIVE.
+        console.log('IN: CancelPurchaseHandler.handle');
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const persistentAttributes = await handlerInput.attributesManager.getPersistentAttributes();
-        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
 
         persistentAttributes.currentSession = sessionAttributes;
         handlerInput.attributesManager.savePersistentAttributes();
@@ -578,6 +579,53 @@ const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
         });
     },
 };
+
+const CancelResponseHandler = {
+    canHandle(handlerInput) {
+      return handlerInput.requestEnvelope.request.type === 'Connections.Response' &&
+        handlerInput.requestEnvelope.request.name === 'Cancel';
+    },
+    handle(handlerInput) {
+      console.log('IN: CancelResponseHandler.handle');
+  
+      const locale = handlerInput.requestEnvelope.request.locale;
+      const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
+      const productId = handlerInput.requestEnvelope.request.payload.productId;
+      let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+      let speakOutput = '';
+      let repeatOutput = '';
+  
+      return ms.getInSkillProducts(locale).then(function handleCancelResponse(result) {
+        const product = result.inSkillProducts.filter(record => record.productId === productId);
+        console.log(`PRODUCT = ${JSON.stringify(product)}`);
+        const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
+        sessionAttributes.currentQuestion = newCurrentQuestion;
+        sessionAttributes.state = states.INPROGRESS;
+        
+        if (handlerInput.requestEnvelope.request.status.code === '200') {
+          if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ACCEPTED') {
+            speakOutput = handlerInput.t('CANCEL_SUCCESS') + askQuestion;
+            repeatOutput = askAgain;
+          }
+          if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'NOT_ENTITLED') {
+            speakOutput = handlerInput.t('NOTHING_TO_CANCEL') + askQuestion;
+            repeatOutput = askAgain;
+          }
+        } else {
+            speakOutput = handlerInput.t('CANNOT_CANCEL_RIGHT_NOW') + askQuestion;
+            repeatOutput = speakOutput;
+        }
+        // Something failed.
+        console.log(`Connections.Response indicated failure. error: ${handlerInput.requestEnvelope.request.status.message}`);
+  
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(repeatOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+      });
+    },
+  };
 
 const BuyHintResponseHandler = {
     canHandle(handlerInput) {
@@ -865,6 +913,7 @@ exports.handler = Alexa.SkillBuilders.standard()
         ResumeHandler,
         BuyHintHandler,
         CancelPurchaseHandler,
+        CancelResponseHandler,
         BuyHintResponseHandler,
         GameRulesHandler,
         HelpIntentHandler,

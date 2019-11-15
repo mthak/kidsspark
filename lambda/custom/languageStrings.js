@@ -13,11 +13,13 @@ module.exports = {
             WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that. What can I help you with?</lang></voice>',
             GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Goodbye! Thank you for playing Millionaire Monkeys</lang></voice>',
             REFLECTOR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You just triggered {{intentName}}</lang></voice>',
-            FALLBACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry, I don\'t know about that. Please try again.</lang></voice>',
+            FALLBACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry, I don\'t know about that. Please try again. If you answering any question say, answer is, and then the answer. To start and resume game please say start new game or resume game to beign playing.</lang></voice>',
             ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry, I had trouble doing what you asked. Please try again.</lang></voice>',
             CANNOT_BUY_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> I don\'t think we have a product by that name.  Can you try again?</lang></voice>',
             START_QUIZ_MESSAGE: '<voice name="Brian"><lang xml:lang="en-GB"> OK.  Let\'s begin \'Millionaire Monkeys\' . </lang></voice>',
-            CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> There was a problem while cancelling this purchase. Please try again after some times.</lang></voice>',
+            CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> There was a problem while cancelling this purchase. Please try again after some times or contact us for help.</lang></voice>',
+            CANCEL_SUCCESS: '<voice name="Brian"><lang xml:lang="en-GB"> You have successfully cancelled your glide lifeline. Please continue to answer your question.</lang></voice>',
+            NOTHING_TO_CANCEL: '<voice name="Brian"><lang xml:lang="en-GB">You don\'t currently have a subscription to cancel.</lang></voice>',
             ERROR_QUESTION_FETCH: '<voice name="Brian"><lang xml:lang="en-GB"> Sorry there was an error retrieving the questions. Please say resume game or start a new game to continue! Or Please try again after some times</lang></voice>',
             QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> To answer the question please say, answer is, and then your answer. Here is your question coming up now. </lang></voice>',
             ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> Congratualtions! You have answered all the questions. You are a Millionaire Monkey. Well Done!  </lang></voice>',
@@ -27,10 +29,10 @@ module.exports = {
             QUESTIONS_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> You can still buy and use your glide life line. If you want to glide over this question, please say buy GLIDE  life  line. </lang></voice>', 
             QUESTIONS_CANNOT_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> Unfortunately you have already used your GLIDE  life  line before. This game is ended .  Please start a new game. </lang></voice>', 
             QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> I didn\'t catch that.</lang></voice>' ,
-            HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You can use Fifty  Fifty option to listen to couple of answers one right and another worng. ' 
+            HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> You can use Fifty  Fifty option to listen to couple of answers one right and another wrong. ' 
             + ' Your another life line Expert Opinion can provide you some guidance for the correct answer. '
-            + ' The third life line GLIDE can take you through an incorrect answers, but you need to buy GLIDE PACK </lang></voice>'
-            + 'To answer your current questions say, answer is, and followed by your answer. Or to start a new game say, start new game. So, What can I help you with?',
+            + ' The third life line GLIDE can take you through an incorrect answers, but you need to buy GLIDE PACK'
+            + 'To answer your current questions say, answer is, and followed by your answer. Or to start a new game say, start new game. So, What can I help you with?</lang></voice>',
             CURRENT_SCORE: '<voice name="Brian"><lang xml:lang="en-GB"> Your current score is {{score}} . </lang></voice>',
             CURRENT_SCORE_ERROR: '<voice name="Brian"><lang xml:lang="en-GB"> Please resume or start a game to know the game score. </lang></voice>',
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Here are the two options for your question. </lang></voice>',
@@ -64,11 +66,13 @@ module.exports = {
             WELCOME_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Das habe ich nicht verstanden. Womit kann ich dir helfen?</lang></voice>',
             GOODBYE_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Auf Wiedersehen! Danke, dass du Millionaire Monkeys spielst</lang></voice>',
             REFLECTOR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sie haben gerade ausgelöst {{intentName}}</lang></voice>',
-            FALLBACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Entschuldigung, das weiß ich nicht. Bitte versuche es erneut.</lang></voice>',
+            FALLBACK_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Entschuldigung, das weiß ich nicht. Bitte versuche es erneut. Wenn Sie eine Frage beantworten, sagen Sie, antworten Sie und dann die Antwort. Um das Spiel zu starten und fortzusetzen, sagen Sie bitte "Neues Spiel starten" oder "Spiel fortsetzen".</lang></voice>',
             ERROR_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Entschuldigung, ich hatte Probleme damit, das zu tun, worum Sie gebeten haben. Bitte versuche es erneut.</lang></voice>',
             CANNOT_BUY_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> Ich glaube nicht, dass wir ein Produkt mit diesem Namen haben. Kannst du es nochmal versuchen?</lang></voice>',
+            CANCEL_SUCCESS: '<voice name="Brian"><lang xml:lang="en-GB"> Sie haben Ihre Gleit-Rettungsleine erfolgreich abgebrochen. Bitte fahren Sie fort, Ihre Frage zu beantworten.</lang></voice>',
+            NOTHING_TO_CANCEL: '<voice name="Brian"><lang xml:lang="en-GB">Sie haben derzeit kein Abonnement zum Kündigen.</lang></voice>',
             START_QUIZ_MESSAGE: '<voice name="Brian"><lang xml:lang="en-GB"> OKAY. Beginnen wir mit Millionaire Monkeys. </lang></voice>',
-            CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> Beim Stornieren dieses Kaufs ist ein Problem aufgetreten. Bitte versuchen Sie es später noch einmal.</lang></voice>',
+            CANNOT_CANCEL_RIGHT_NOW: '<voice name="Brian"><lang xml:lang="en-GB"> Beim Stornieren dieses Kaufs ist ein Problem aufgetreten. Bitte versuchen Sie es später noch einmal oder kontaktieren Sie uns, um Hilfe zu erhalten.</lang></voice>',
             ERROR_QUESTION_FETCH: '<voice name="Brian"><lang xml:lang="en-GB"> Beim Abrufen der Fragen ist ein Fehler aufgetreten. Sagen Sie bitte "Spiel fortsetzen" oder starten Sie ein neues Spiel, um fortzufahren! Oder Bitte versuchen Sie es später noch einmal</lang></voice>',
             QUESTION_BEGIN: '<voice name="Brian"><lang xml:lang="en-GB"> Um die Frage zu beantworten, sagen Sie bitte, Antwort ist, und dann Ihre Antwort . Hier ist Ihre Frage, die jetzt auftaucht. </lang></voice>',
             ALL_QUESTIONS_ANSWERED: '<voice name="Brian"><lang xml:lang="en-GB"> Glückwunsch! Sie haben alle Fragen beantwortet. Gut gemacht!</lang></voice>',
@@ -78,10 +82,10 @@ module.exports = {
             QUESTIONS_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> Sie können Ihre Gleitleine weiterhin kaufen und verwenden. Wenn Sie über diese Frage hinweggleiten möchten, sagen Sie bitte GLIDE life line kaufen. </lang></voice>', 
             QUESTIONS_CANNOT_JUMP: '<voice name="Brian"><lang xml:lang="en-GB"> Leider haben Sie Ihre GLIDE life line schon einmal benutzt. Dieses Spiel ist beendet . Bitte starte ein neues Spiel. </lang></voice>', 
             QUESTIONS_REPROMPT_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Das habe ich nicht verstanden.</lang></voice>' ,
-            HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sie können die Option Fifty Fifty verwenden, um ein paar der richtigen und ein anderes Worng-Antworten anzuhören. ' 
+            HELP_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Sie können die Option Fifty Fifty verwenden, um ein paar der richtigen und ein anderes Wrong-Antworten anzuhören. ' 
             + ' Ihre andere Lebenslinie Expert Opinion kann Ihnen eine Anleitung für die richtige Antwort geben. '
-            + ' Die dritte Lebensader GLIDE kann Sie durch falsche Antworten führen, aber Sie müssen GLIDE PACK kaufen </lang></voice>'
-            + 'Um Ihre aktuellen Fragen zu beantworten, sagen Sie, antworten Sie mit und geben Sie anschließend Ihre Antwort. Oder, um ein neues Spiel zu starten, sagen wir, starten Sie ein neues Spiel. Also, womit kann ich Ihnen helfen?',
+            + ' Die dritte Lebensader GLIDE kann Sie durch falsche Antworten führen, aber Sie müssen GLIDE PACK kaufen'
+            + 'Um Ihre aktuellen Fragen zu beantworten, sagen Sie, antworten Sie mit und geben Sie anschließend Ihre Antwort. Oder, um ein neues Spiel zu starten, sagen wir, starten Sie ein neues Spiel. Also, womit kann ich Ihnen helfen?</lang></voice>',
             CURRENT_SCORE: '<voice name="Brian"><lang xml:lang="en-GB"> Ihre aktuelle Punktzahl ist {{score}} . </lang></voice>',
             CURRENT_SCORE_ERROR: '<voice name="Brian"><lang xml:lang="en-GB">Bitte setzen Sie das Spiel fort oder starten Sie es, um den Spielstand zu erfahren.</lang></voice>',
             FIFTY_FITY_MSG: '<voice name="Brian"><lang xml:lang="en-GB"> Hier sind die beiden Optionen für Ihre Frage. </lang></voice>',

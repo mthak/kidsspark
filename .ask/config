@@ -37,7 +37,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "a33b6362-5301-4a5d-a99e-7d1ddbc25a95",
+            "revisionId": "4c8ccf6f-f62d-4b3e-8fec-6ccc5d79211c",
             "runtime": "nodejs8.10"
           }
         ]

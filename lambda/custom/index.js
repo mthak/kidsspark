@@ -55,6 +55,7 @@ const ResumeHandler = {
     handle(handlerInput) {
         console.log("ResumeHandler: handle");
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let response = handlerInput.responseBuilder;
         if (sessionAttributes.gameQuestions == undefined || sessionAttributes.gameQuestions == null) {
             console.log("ResumeHandler: handle in side check");
             return handlerInput.responseBuilder.speak(handlerInput.t('RESUME_ERROR_MSG'))
@@ -69,6 +70,7 @@ const ResumeHandler = {
         let speakOutput = askQuestion;
         console.error("*****************RESUME GAME  QUESTIONS RETRUNED***************** " + currentQuestion);
         sessionAttributes.currentQuestion = currentQuestion;
+        sessionAttributes.state = states.INPROGRESS;
         return response.speak(speakOutput)
                      .reprompt(askAgain)
                      .withShouldEndSession(false)
@@ -164,8 +166,8 @@ const FiftyFiftyHandler = {
                 sessionAttributes.fiftyFityUsed = true;
 
             } else {
-                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "});
-                repromt = handlerInput.t('LIFE_LINES_SATUS');
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+                repromt = handlerInput.t('LIFE_LINES_SATUS' , {currentQuestion: sessionAttributes.currentQuestion.ques});
             }
 
         } else {
@@ -199,8 +201,8 @@ const ExpertReviewHandler = {
                 repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 sessionAttributes.expertReviewUsed = true;
             } else {
-                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Expert Review "});
-                repromt = handlerInput.t('LIFE_LINES_SATUS');
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Expert Review "} , {currentQuestion: sessionAttributes.currentQuestion.ques});
+                repromt = handlerInput.t('LIFE_LINES_SATUS', {currentQuestion: sessionAttributes.currentQuestion.ques});
             }
 
         } else {
@@ -273,7 +275,9 @@ const LifeLineHandler = {
                 lifeLinesLeft = " expert review, " + lifeLinesLeft;
             if(sessionAttributes.glideOptionUsed === false)
                 lifeLinesLeft = " glide option, " + lifeLinesLeft;
-
+            if (lifeLinesLeft == "")
+            lifeLinesLeft = "zero"
+            
             speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
             repromt = handlerInput.t('START_GAME_MSG');
 
@@ -487,8 +491,8 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
         handlerInput.attributesManager.savePersistentAttributes();
 
         if(sessionAttributes.glideOptionUsed) {
-            let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "});
-            let repromt = handlerInput.t('LIFE_LINES_SATUS');
+            let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Glide "}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+            let repromt = handlerInput.t('LIFE_LINES_SATUS', {currentQuestion: sessionAttributes.currentQuestion.ques});
             return response.speak(speakOutput)
                      .reprompt(repromt)
                      .withShouldEndSession(false)

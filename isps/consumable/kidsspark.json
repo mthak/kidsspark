@@ -8,8 +8,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a glide life line to help you skip over an incorrect answer.",
         "description": "This is a glide life line to help you skip over an incorrect answer.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c8d0/bd889b98ef244a9f83bc18e9c8046fc0/APP_ICON?versionId=iBgH0trsBrl81ThPN1VfSZjOO35vUt4w&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=de9fb7214896c023940dfe92c5938582c0aece706f363afeb53fd179a5bd9497",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ab24/d2d0c4c16c6444a7befb448a278fe12e/APP_ICON_LARGE?versionId=nWYzsSNIfKVJhJLsiZtFUfRPz5.2RUn_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ec4dbcd46343e1f48c53d3fedac925ec7d349c1d1ec6d62bc246c05f538cc9",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c8d0/bd889b98ef244a9f83bc18e9c8046fc0/APP_ICON?versionId=iBgH0trsBrl81ThPN1VfSZjOO35vUt4w&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=fb570feb5b4f68564449c3755e0e68abad10829cfa377bd97ea4f02524f1dd8d",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ab24/d2d0c4c16c6444a7befb448a278fe12e/APP_ICON_LARGE?versionId=nWYzsSNIfKVJhJLsiZtFUfRPz5.2RUn_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c177918a215c115d26906c7c087752af53332ecf8e4bc24081662a9cd93e4d91",
         "examplePhrases": [
           "Alexa, kauf ein Geschenk"
         ],
@@ -27,8 +27,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a glide life line to help you skip over an incorrect answer.",
         "description": "When your answers is incorrect. This glide life line can be used jump over the question and keep moving ahead.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=52354cd71afe7477c6f6f389b4e03c4807612c28cfe41656cea2620bfa2060f1",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e691a461b249a17ab1513916d5ecd8ec520158221f492ec52e6de606d0bde5d4",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e01bf687e5b88525728e14ed506dfd2c2ffb6d0c996986fa2b1a06b7eaccd81e",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b61a7e70722d466949c7abb0078afb703fd0008d8038dace29f7e6b452602fb5",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",
@@ -48,8 +48,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a glide life line to help you skip over an incorrect answer.",
         "description": "When your answers is incorrect. This glide life line can be used jump over the question and keep moving ahead.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/960a/3ed1138dfade4cb6ae14d5e9fef6cc09/APP_ICON?versionId=fg6bYpESf42lbGApmK9yZnzfS6OUlGYR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=551e63118df8767e2cdfa231506ca22d8937b51ba3853f69b4362a6dff948b64",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/949c/d0a8dfe7ef2844a28a8140c246c78d6f/APP_ICON_LARGE?versionId=tyMaHqFcP3Srf1yccjroKP27XalbOvFk&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T005905Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e25dfeaa3d106f7fc37588395a092adaad15942f5a8940451efada62b74beb48",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/960a/3ed1138dfade4cb6ae14d5e9fef6cc09/APP_ICON?versionId=fg6bYpESf42lbGApmK9yZnzfS6OUlGYR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f81a1e66e2fd12edfb47585e3e706afd7704aa5ff823ba237fda7003a3b49bda",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/949c/d0a8dfe7ef2844a28a8140c246c78d6f/APP_ICON_LARGE?versionId=tyMaHqFcP3Srf1yccjroKP27XalbOvFk&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191119T035110Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d9d6c534062fb7cea07e62b9c3d4d289ea17166e90ed40d1993686e95deae1cd",
         "examplePhrases": [
           "Alexa, buy a gift",
           "Alexa, buy gift",

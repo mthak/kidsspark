@@ -167,7 +167,7 @@ const FiftyFiftyHandler = {
                 sessionAttributes.fiftyFityUsed = true;
 
             } else {
-                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty "}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Fifty Fifty ", currentQuestion: sessionAttributes.currentQuestion.ques});
                 repromt = handlerInput.t('LIFE_LINES_SATUS' , {currentQuestion: sessionAttributes.currentQuestion.ques});
             }
 
@@ -202,7 +202,7 @@ const ExpertReviewHandler = {
                 repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 sessionAttributes.expertReviewUsed = true;
             } else {
-                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Expert Review "} , {currentQuestion: sessionAttributes.currentQuestion.ques});
+                speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Expert Review ", currentQuestion: sessionAttributes.currentQuestion.ques});
                 repromt = handlerInput.t('LIFE_LINES_SATUS', {currentQuestion: sessionAttributes.currentQuestion.ques});
             }
 
@@ -241,7 +241,7 @@ const ScoreHandler = {
             if(sessionAttributes.glideOptionUsed === false)
                 lifeLinesLeft = " glide , " + lifeLinesLeft;
                 
-            speakOutput = handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+            speakOutput = handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft, currentQuestion: sessionAttributes.currentQuestion.ques});
             repromt = handlerInput.t('START_GAME_MSG');
 
         } else {
@@ -279,7 +279,7 @@ const LifeLineHandler = {
             if (lifeLinesLeft == "")
             lifeLinesLeft = "zero"
             
-            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft, currentQuestion: sessionAttributes.currentQuestion.ques});
             repromt = handlerInput.t('START_GAME_MSG');
 
             
@@ -494,16 +494,25 @@ const BuyHintHandler = {
         // SAVING SESSION ATTRIBUTES TO PERSISTENT ATTRIBUTES,
         // BECAUSE THE SESSION EXPIRES WHEN WE START A CONNECTIONS DIRECTIVE.
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        
+        console.log('IN: BuyHintHandler.handle 1 check');
         if(sessionAttributes.glideOptionUsed) {
-            let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Glide "}, {currentQuestion: sessionAttributes.currentQuestion.ques});
+            let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Glide ", currentQuestion: sessionAttributes.currentQuestion.ques});
             let repromt = handlerInput.t('LIFE_LINES_SATUS', {currentQuestion: sessionAttributes.currentQuestion.ques});
-            return response.speak(speakOutput)
+            return handlerInput.responseBuilder.speak(speakOutput)
                      .reprompt(repromt)
                      .withShouldEndSession(false)
                      .getResponse();
         }
-        attributesManager.setPersistentAttributes(sessionAttributes);
+        console.log('IN: BuyHintHandler.handle 2 check');
+        if (sessionAttributes.state != states.INPROGRESS) {
+            let speakOutput = handlerInput.t('LIFE_LINE_ERROR_MSG') + handlerInput.t('START_GAME_MSG');
+            let repromt = handlerInput.t('START_GAME_MSG');
+            return handlerInput.responseBuilder.speak(speakOutput)
+                     .reprompt(repromt)
+                     .getResponse();
+        }
+        console.log('IN: BuyHintHandler.handle 3 check');
+        handlerInput.attributesManager.setPersistentAttributes(sessionAttributes);
         handlerInput.attributesManager.savePersistentAttributes();
 
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
@@ -549,7 +558,7 @@ const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
         console.log('IN: CancelPurchaseHandler.handle');
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
-        attributesManager.setPersistentAttributes(sessionAttributes);
+        handlerInput.attributesManager.setPersistentAttributes(sessionAttributes);
         handlerInput.attributesManager.savePersistentAttributes();
 
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
@@ -592,27 +601,24 @@ const CancelResponseHandler = {
       const productId = handlerInput.requestEnvelope.request.payload.productId;
       let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
       let speakOutput = '';
-      let repeatOutput = '';
+      let repeatOutput = handlerInput.t('RESUME_AFTER_CANCEL_PURCHASE');
   
       return ms.getInSkillProducts(locale).then(function handleCancelResponse(result) {
         const product = result.inSkillProducts.filter(record => record.productId === productId);
         console.log(`PRODUCT = ${JSON.stringify(product)}`);
-        const [askQuestion, askAgain, newCurrentQuestion] = generatePresentableQuestion(sessionAttributes.gameQuestions, handlerInput);
-        sessionAttributes.currentQuestion = newCurrentQuestion;
-        sessionAttributes.state = states.INPROGRESS;
         
         if (handlerInput.requestEnvelope.request.status.code === '200') {
           if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'ACCEPTED') {
-            speakOutput = handlerInput.t('CANCEL_SUCCESS') + askQuestion;
-            repeatOutput = askAgain;
+            speakOutput = handlerInput.t('CANCEL_SUCCESS') + handlerInput.t('RESUME_AFTER_CANCEL_PURCHASE');
+            
           }
           if (handlerInput.requestEnvelope.request.payload.purchaseResult === 'NOT_ENTITLED') {
-            speakOutput = handlerInput.t('NOTHING_TO_CANCEL') + askQuestion;
-            repeatOutput = askAgain;
+            speakOutput = handlerInput.t('NOTHING_TO_CANCEL') + handlerInput.t('RESUME_AFTER_CANCEL_PURCHASE');
+      
           }
         } else {
-            speakOutput = handlerInput.t('CANNOT_CANCEL_RIGHT_NOW') + askQuestion;
-            repeatOutput = askAgain;
+            speakOutput = handlerInput.t('CANNOT_CANCEL_RIGHT_NOW') + handlerInput.t('RESUME_AFTER_CANCEL_PURCHASE');
+            
         }
         // Something failed.
         console.log(`Connections.Response indicated failure. error: ${handlerInput.requestEnvelope.request.status.message}`);

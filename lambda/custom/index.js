@@ -16,7 +16,8 @@ const states = {
     QUIZ: `_QUIZ`,
     INPROGRESS: `_IN_PROGRESS`,
     ANSWER: `_ANSWER`,
-    GROUP_INIT: `_GROUP_INIT`
+    GROUP_INIT: `_GROUP_INIT`,
+    COMPLETED: `COMPLETED`
   };
 
 const LaunchRequestHandler = {
@@ -56,7 +57,7 @@ const ResumeHandler = {
         console.log("ResumeHandler: handle");
         let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         let response = handlerInput.responseBuilder;
-        if (sessionAttributes.gameQuestions == undefined || sessionAttributes.gameQuestions == null) {
+        if (sessionAttributes.gameQuestions == undefined || sessionAttributes.gameQuestions == null || sessionAttributes.state == states.COMPLETED) {
             console.log("ResumeHandler: handle in side check");
             return handlerInput.responseBuilder.speak(handlerInput.t('RESUME_ERROR_MSG'))
             .reprompt(handlerInput.t('RESUME_ERROR_MSG'))
@@ -161,7 +162,7 @@ const FiftyFiftyHandler = {
         if (sessionAttributes.state == states.INPROGRESS  && sessionAttributes.currentQuestion != null) {
             
             if(!sessionAttributes.fiftyFityUsed) {
-                speakOutput = handlerInput.t('FIFTY_FITY_MSG') + sessionAttributes.currentQuestion.help;
+                speakOutput = handlerInput.t('FIFTY_FITY_MSG') + sessionAttributes.currentQuestion.help + handlerInput.t('REASK_FIFTY_FIFTY_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 sessionAttributes.fiftyFityUsed = true;
 
@@ -197,7 +198,7 @@ const ExpertReviewHandler = {
         if (sessionAttributes.state == states.INPROGRESS && sessionAttributes.currentQuestion != null) {
 
             if (!sessionAttributes.expertReviewUsed) {
-                speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.hint;
+                speakOutput = handlerInput.t('EXPERT_REVIEW_MSG') + sessionAttributes.currentQuestion.hint + handlerInput.t('REASK_EXPERT_REVIEW_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 repromt = handlerInput.t('CURRENT_QUESTION', {currentQuestion: sessionAttributes.currentQuestion.ques});
                 sessionAttributes.expertReviewUsed = true;
             } else {
@@ -240,7 +241,7 @@ const ScoreHandler = {
             if(sessionAttributes.glideOptionUsed === false)
                 lifeLinesLeft = " glide , " + lifeLinesLeft;
                 
-            speakOutput = handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            speakOutput = handlerInput.t('CURRENT_SCORE', {score: sessionAttributes.quizScore}) + handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft}, {currentQuestion: sessionAttributes.currentQuestion.ques});
             repromt = handlerInput.t('START_GAME_MSG');
 
         } else {
@@ -278,7 +279,7 @@ const LifeLineHandler = {
             if (lifeLinesLeft == "")
             lifeLinesLeft = "zero"
             
-            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft});
+            speakOutput = handlerInput.t('LIFE_LINE_MSG', {lifeLinesLeft: lifeLinesLeft}, {currentQuestion: sessionAttributes.currentQuestion.ques});
             repromt = handlerInput.t('START_GAME_MSG');
 
             
@@ -411,7 +412,7 @@ const QuizResponseHandler = {
             }
         }
 
-        if(sessionAttributes.questionCounter == 15) {
+        if(sessionAttributes.state == states.COMPLETED) {
             return response.speak(speakOutput)
 			         .reprompt(repeatOutput)
         			 .withShouldEndSession(true)
@@ -461,6 +462,7 @@ function generatePresentableQuestion(questions, handlerInput) {
         return  [handlerInput.t('QUESTION_BEGIN') + ques, ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
     } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
+        sessionAttributes.state = states.COMPLETED;
         sessionAttributes.currentQuestion = null;
     }
     
@@ -483,7 +485,7 @@ async function fetchAllQuestions(group, locale) {
     return fetchedQuestion;
 }
 
-const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
+const BuyHintHandler = { 
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name === 'BuyIntent';
@@ -492,11 +494,7 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
         // SAVING SESSION ATTRIBUTES TO PERSISTENT ATTRIBUTES,
         // BECAUSE THE SESSION EXPIRES WHEN WE START A CONNECTIONS DIRECTIVE.
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        const persistentAttributes = await handlerInput.attributesManager.getPersistentAttributes();
-        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-        persistentAttributes.currentSession = sessionAttributes;
-        handlerInput.attributesManager.savePersistentAttributes();
-
+        
         if(sessionAttributes.glideOptionUsed) {
             let speakOutput = handlerInput.t('LIFE_LINE_EXHAUSTED', {lifeLineName: " Glide "}, {currentQuestion: sessionAttributes.currentQuestion.ques});
             let repromt = handlerInput.t('LIFE_LINES_SATUS', {currentQuestion: sessionAttributes.currentQuestion.ques});
@@ -505,6 +503,8 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
                      .withShouldEndSession(false)
                      .getResponse();
         }
+        attributesManager.setPersistentAttributes(sessionAttributes);
+        handlerInput.attributesManager.savePersistentAttributes();
 
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
 
@@ -530,7 +530,7 @@ const BuyHintHandler = { //TODO sessionAttributes.glideOptionUsed = true;
             + ' incorrectly, the locale not supporting ISPs, or the customer\'s account being from an unsupported marketplace.');
 
             return handlerInput.responseBuilder
-                .speak(handlerInput.t('CANNOT_BUY_RIGHT_NOW'))
+                .speak(handlerInput.t('CANNOT_BUY_RIGHT_NOW', {currentQuestion: sessionAttributes.currentQuestion.ques}))
                 .withShouldEndSession(false)
                 .getResponse();
         });
@@ -548,9 +548,8 @@ const CancelPurchaseHandler = {//TODO sessionAttributes.glideOptionUsed = false;
         // BECAUSE THE SESSION EXPIRES WHEN WE START A CONNECTIONS DIRECTIVE.
         console.log('IN: CancelPurchaseHandler.handle');
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
-        const persistentAttributes = await handlerInput.attributesManager.getPersistentAttributes();
 
-        persistentAttributes.currentSession = sessionAttributes;
+        attributesManager.setPersistentAttributes(sessionAttributes);
         handlerInput.attributesManager.savePersistentAttributes();
 
         const ms = handlerInput.serviceClientFactory.getMonetizationServiceClient();
@@ -613,7 +612,7 @@ const CancelResponseHandler = {
           }
         } else {
             speakOutput = handlerInput.t('CANNOT_CANCEL_RIGHT_NOW') + askQuestion;
-            repeatOutput = speakOutput;
+            repeatOutput = askAgain;
         }
         // Something failed.
         console.log(`Connections.Response indicated failure. error: ${handlerInput.requestEnvelope.request.status.message}`);

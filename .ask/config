@@ -14,17 +14,17 @@
       ],
       "resources": {
         "manifest": {
-          "eTag": "38ba2cfc09687771ddb03e0b6739092a"
+          "eTag": "a9379f48a7d242d07407cf4b61143ad6"
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "bdf5a4366040e4663a0d007fcd02d5d9"
+            "eTag": "a22d5570d634262c855ca4602bc4a3f0"
           },
           "en-GB": {
-            "eTag": "8a97bcb037a0b6db2fa7d50996530bfc"
+            "eTag": "9c9b5919dc3cfd9747ca1ede73caa81f"
           },
           "en-US": {
-            "eTag": "24119df2c906b269f9b6e4a7da93bc3d"
+            "eTag": "02449f489cf8f4c7b76e03903b758ae0"
           }
         },
         "lambda": [
@@ -37,7 +37,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "4c8ccf6f-f62d-4b3e-8fec-6ccc5d79211c",
+            "revisionId": "7b181d0d-66ff-431f-854b-ed2890d83bf5",
             "runtime": "nodejs8.10"
           }
         ]

@@ -26,8 +26,8 @@
         },
         "de-DE": {
           "name": "millionaire monkeys",
-          "summary": "Willkommen bei Millionaire Monkeys. ",
-          "description": "Willkommen bei Millionaire Monkeys. ",
+          "summary": "In diesem Spiel geht es darum, auf spielerische Weise Fragen zu verschiedenen Fertigkeiten zu lösen und dabei die Lebenslinien zu unterstützen.",
+          "description": "Sie erhalten 15 Fragen und 3 Lebenslinien, die Ihnen beim Spielen helfen. Um ein neues Spiel zu starten, können Sie sagen, dass Sie ein neues Spiel starten, eine Gruppe starten oder in einer vorhandenen Gruppe spielen möchten, indem Sie eine neue Gruppe erstellen oder in einer vorhandenen Gruppe spielen, gefolgt von Gruppenname, oder wenn Sie Informationen zu den Lebenslinien in diesem Spiel erhalten möchten, sagen Sie Lebenslinien . Sagen Sie, um Hilfe zu erhalten, Helfen Sie mir",
           "examplePhrases": [
             "Alexa, frag millionaire monkeys",
             "Alexa, starte millionaire monkeys"

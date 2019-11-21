@@ -9,7 +9,13 @@
                 },
                 {
                     "name": "AMAZON.HelpIntent",
-                    "samples": []
+                    "samples": [
+                        "helfen sie mir",
+                        "Hilfe",
+                        "hilf mir mit dem Spiel",
+                        "wie man dieses Spiel spielt",
+                        "Spielanleitung"
+                    ]
                 },
                 {
                     "name": "AMAZON.StopIntent",
@@ -35,17 +41,6 @@
                         "single mode",
                         "begin game",
                         "begin the game",
-                        "continue the game",
-                        "continue game",
-                        "let's continue the game",
-                        "lets continue the game",
-                        "let us continue the game",
-                        "let us continue with game",
-                        "let us continue",
-                        "let's continue with game",
-                        "let's continue",
-                        "lets continue with game",
-                        "lets continue",
                         "start",
                         "lets play",
                         "lets play game",

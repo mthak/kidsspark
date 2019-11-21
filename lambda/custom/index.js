@@ -406,9 +406,9 @@ const QuizResponseHandler = {
                 speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_JUMP');
                 repeatOutput = handlerInput.t('QUESTIONS_JUMP');
             } else {
-                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_CANNOT_JUMP');
-                repeatOutput = handlerInput.t('QUESTIONS_CANNOT_JUMP');
-                sessionAttributes.state = null;
+                speakOutput = handlerInput.t('QUESTIONS_ANSWERED_WORNG') + handlerInput.t('QUESTIONS_CANNOT_JUMP') + handlerInput.t('GOODBYE_MSG');
+                repeatOutput = handlerInput.t('QUESTIONS_CANNOT_JUMP') + handlerInput.t('GOODBYE_MSG');
+                sessionAttributes.state = states.COMPLETED;
             }
         }
 
@@ -858,7 +858,7 @@ const RequestLog = {
          /**
        * Ensure a state in case we're starting fresh
        */
-      if (sessionAttributes.state == null) {
+      if (sessionAttributes.state == null || sessionAttributes.state == states.COMPLETED) {
         console.log('SETTING state TO START GAME MODE');
         sessionAttributes.state = states.START;
       }

@@ -4,15 +4,26 @@
             "invocationName": "millionaire monkeys",
             "intents": [{
                     "name": "AMAZON.CancelIntent",
-                    "samples": []
+                    "samples": [
+                        "Spiel abbrechen",
+                        "stornieren"
+                    ]
                 },
                 {
                     "name": "AMAZON.HelpIntent",
-                    "samples": []
+                    "samples": [
+                        "helfen sie mir",
+                        "Hilfe",
+                        "hilf mir mit dem Spiel",
+                        "wie man dieses Spiel spielt",
+                        "Spielanleitung"]
                 },
                 {
                     "name": "AMAZON.StopIntent",
-                    "samples": []
+                    "samples": [
+                        "halt",
+                        "Stoppen Sie das Spiel"
+                    ]
                 },
                 {
                     "name": "QuizIntent",
@@ -189,7 +200,9 @@
                 },
                 {
                     "name": "AMAZON.StartOverIntent",
-                    "samples": []
+                    "samples": [
+                        "Von vorn anfangen"
+                    ]
                 },
                 {
                     "name": "QuizAnswerIntent",

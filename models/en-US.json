@@ -10,11 +10,7 @@
                 {
                     "name": "AMAZON.HelpIntent",
                     "samples": [
-                        "helfen sie mir",
-                        "Hilfe",
-                        "hilf mir mit dem Spiel",
-                        "wie man dieses Spiel spielt",
-                        "Spielanleitung"
+                        "help me"
                     ]
                 },
                 {

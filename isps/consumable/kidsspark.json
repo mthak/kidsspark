@@ -8,8 +8,8 @@
         "name": "Millionaire Monkeys Glide-Rettungsleine",
         "summary": "Dies ist eine Lebensader, mit der Sie eine falsche Antwort überspringen können.",
         "description": "Wenn Ihre Antworten falsch sind. Diese Gleit-Lebenslinie kann verwendet werden, um über diese Frage zu springen und Sie in Bewegung zu halten. Dies kann nur einmal verwendet werden.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c8d0/bd889b98ef244a9f83bc18e9c8046fc0/APP_ICON?versionId=iBgH0trsBrl81ThPN1VfSZjOO35vUt4w&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=cb96c80b4af80374920a22748ccba76938dabdee84aebb9f947f7c2b4075676f",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ab24/d2d0c4c16c6444a7befb448a278fe12e/APP_ICON_LARGE?versionId=nWYzsSNIfKVJhJLsiZtFUfRPz5.2RUn_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=27509e22702ad45aacb59c8819bb75b5a70151646558f27075ee06780db6ec07",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
         "examplePhrases": [
           "Alexa, einen Gleitflug kaufen",
           "Alexa, Gleitflug kaufen",
@@ -29,8 +29,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a life line to help you jump over an incorrect answer.",
         "description": "When your answers is incorrect. This glide life line can be used jump over that question to keep you moving ahead. This can be used only once.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=6e33e6cfc1bbb88289879896b29c02da02833202013085ce1cdd3109902e5264",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ae65f223b2c538ef568a9dad22bada56620da08efc132e6091689020dd419281",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
         "examplePhrases": [
           "Alexa, buy a glide",
           "Alexa, buy glide",
@@ -50,8 +50,8 @@
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a life line to help you jump over an incorrect answer.",
         "description": "When your answers is incorrect. This glide life line can be used jump over that question to keep you moving ahead. This can be used only once.",
-        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/960a/3ed1138dfade4cb6ae14d5e9fef6cc09/APP_ICON?versionId=fg6bYpESf42lbGApmK9yZnzfS6OUlGYR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=28bc44f612d467501b2ee3100028b31efc9caa6c106ffabd81f5a021f1b7c840",
-        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/949c/d0a8dfe7ef2844a28a8140c246c78d6f/APP_ICON_LARGE?versionId=tyMaHqFcP3Srf1yccjroKP27XalbOvFk&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191121T164141Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=21b711a9f65e0e96110faab756ee5fc7eb4818531273054237e1980acc86cb6b",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
         "examplePhrases": [
           "Alexa, buy a glide",
           "Alexa, buy glide",

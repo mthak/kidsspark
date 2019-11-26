@@ -7,9 +7,9 @@
       "de-DE": {
         "name": "Millionaire Monkeys Glide-Rettungsleine",
         "summary": "Dies ist eine Lebensader, mit der Sie eine falsche Antwort überspringen können.",
-        "description": "Wenn Ihre Antworten falsch sind. Diese Gleit-Lebenslinie kann verwendet werden, um über diese Frage zu springen und Sie in Bewegung zu halten. Dies kann nur einmal verwendet werden.",
-        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
-        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "description": "Wenn Sie eine Frage falsch beantworten, verlieren Sie das Spiel. Die Gleit-Lebenslinie kann Ihnen helfen, eine falsche Antwort nur einmal zu überspringen. Damit Sie das Spiel weiterspielen können. Andernfalls endet Ihr Spiel, wenn Sie eine einzelne Frage falsch beantworten und keine Gleit-Lebenslinie mehr haben.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c8d0/bd889b98ef244a9f83bc18e9c8046fc0/APP_ICON?versionId=iBgH0trsBrl81ThPN1VfSZjOO35vUt4w&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=7236b27b847c8694f80dab6d29003b05fb8dbc577c419282f5fc2fe9c17a3de1",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ab24/d2d0c4c16c6444a7befb448a278fe12e/APP_ICON_LARGE?versionId=nWYzsSNIfKVJhJLsiZtFUfRPz5.2RUn_&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f6b826073f79d8a8388bce6848fd3d5ed6be4444704f62f8c862c15a3bff2838",
         "examplePhrases": [
           "Alexa, einen Gleitflug kaufen",
           "Alexa, Gleitflug kaufen",
@@ -28,9 +28,9 @@
       "en-US": {
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a life line to help you jump over an incorrect answer.",
-        "description": "When your answers is incorrect. This glide life line can be used jump over that question to keep you moving ahead. This can be used only once.",
-        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
-        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "description": "If you answer any question incorrectly you will loose the game. The glide life line can help you jump over an incorrect answer, only once. So that you can continue playing the game. Otherwise your game ends if you incorectly answer any single question and you don't have glide life line left.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/67b1/c7cbf3b3444846f0a59b54ff5f3d123c/APP_ICON?versionId=S4uHnWXdmK_ctLdkjr73OGosLMOU.9Yu&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f75dea967a0fe8c5555d7ebabc07fbcacfd5e390ac7ac0036c70931e7ee5e9a1",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/de25/f9f6b643ef174b7eb74af5d180fe6e94/APP_ICON_LARGE?versionId=bOen36qPANOD33AIqujVH6CBDOPwGcyA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ed0f3d64f58b5fdcae807fd1dceeeaf8b21a468769aa19b356d860b82d4cc063",
         "examplePhrases": [
           "Alexa, buy a glide",
           "Alexa, buy glide",
@@ -49,9 +49,9 @@
       "en-GB": {
         "name": "Millionaire Monkeys Glide Life Line",
         "summary": "This is a life line to help you jump over an incorrect answer.",
-        "description": "When your answers is incorrect. This glide life line can be used jump over that question to keep you moving ahead. This can be used only once.",
-        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
-        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "description": "If you answer any question incorrectly you will loose the game. The glide life line can help you jump over an incorrect answer, only once. So that you can continue playing the game. Otherwise your game ends if you incorectly answer any single question and you don't have glide life line left.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/960a/3ed1138dfade4cb6ae14d5e9fef6cc09/APP_ICON?versionId=fg6bYpESf42lbGApmK9yZnzfS6OUlGYR&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5a7d7ad26136a87b549204af79d97c0aeeb7a62cd2a3ec1b858849f4694f1798",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/949c/d0a8dfe7ef2844a28a8140c246c78d6f/APP_ICON_LARGE?versionId=tyMaHqFcP3Srf1yccjroKP27XalbOvFk&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191126T222253Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20191126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=452e93ce9b7e34a9c1e64e6fe0f11ce5d8e8ec3f3a3134b62cdce5d11339fb2d",
         "examplePhrases": [
           "Alexa, buy a glide",
           "Alexa, buy glide",

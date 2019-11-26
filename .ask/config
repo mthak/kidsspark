@@ -9,7 +9,7 @@
           "deploy_status": "Update",
           "filePath": "isps/consumable/kidsspark.json",
           "productId": "amzn1.adg.product.43e5df2b-48d5-42f1-9ead-f3f93e36a95e",
-          "eTag": "293bdcaae99b14dbef5586ce315e69df"
+          "eTag": "19ddf2d399fed087525a0a0d828de386"
         }
       ],
       "resources": {
@@ -18,13 +18,13 @@
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "5e51b85cc42486d858e4db52baaf6f48"
+            "eTag": "4ffaaa892df10a60775f87063a8eec09"
           },
           "en-GB": {
-            "eTag": "fc0d101838d7494b92d57f0b6255a4bc"
+            "eTag": "976c62e7ece05091854a44e4379949db"
           },
           "en-US": {
-            "eTag": "42d2fe5fa75d4204aed3b36c7f9785d5"
+            "eTag": "c9fea81483fa76f2af20be60e85ca40b"
           }
         },
         "lambda": [
@@ -37,7 +37,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "990cc7e0-580c-44be-afb9-8f4e3233b3da",
+            "revisionId": "45b4a1ba-15ae-4650-a0cf-4350af8e1399",
             "runtime": "nodejs8.10"
           }
         ]

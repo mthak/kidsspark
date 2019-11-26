@@ -421,7 +421,6 @@ const QuizResponseHandler = {
 
         return response.speak(speakOutput)
 			         .reprompt(repeatOutput)
-        			 .withShouldEndSession(false)
                      .getResponse();
     }
 }
@@ -458,7 +457,7 @@ function generatePresentableQuestion(questions, handlerInput) {
     
     if(currentQuestion != null) {
         console.info("generatePresentableQuestion: counting questions");
-        let ques = '<voice name="Brian"><lang xml:lang="en-GB">' + currentQuestion.ques + '</lang></voice>';
+        let ques = handlerInput.t('QUESTION', {question: currentQuestion.ques});
         return  [handlerInput.t('QUESTION_BEGIN') + ques, ques + handlerInput.t('USE_LIFE_LINES'), currentQuestion];
     } else if (currentQuestion == null) {
         conversationString = handlerInput.t('ALL_QUESTIONS_ANSWERED');
@@ -739,7 +738,6 @@ const FallbackIntentHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
-            .withShouldEndSession(false)
             .getResponse();
     }
 };

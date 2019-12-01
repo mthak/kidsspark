@@ -18,13 +18,13 @@
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "4ffaaa892df10a60775f87063a8eec09"
+            "eTag": "c36fcdbb8428d3a68669aea909d590ce"
           },
           "en-GB": {
-            "eTag": "976c62e7ece05091854a44e4379949db"
+            "eTag": "2f816fe1f35797417b17a6acc7ce1cd7"
           },
           "en-US": {
-            "eTag": "c9fea81483fa76f2af20be60e85ca40b"
+            "eTag": "bf54e2c037523660e786cd3d80b40ff4"
           }
         },
         "lambda": [
@@ -37,7 +37,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "45b4a1ba-15ae-4650-a0cf-4350af8e1399",
+            "revisionId": "42be579a-03f9-4c3b-9d30-3598a8afc693",
             "runtime": "nodejs8.10"
           }
         ]

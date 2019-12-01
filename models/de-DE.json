@@ -20,7 +20,9 @@
                     "name": "AMAZON.StopIntent",
                     "samples": [
                         "halt",
-                        "Stoppen Sie das Spiel"
+                        "Stoppen Sie das Spiel",
+                        "Spiel verlassen",
+                        "Ausfahrt"
                     ]
                 },
                 {
@@ -135,7 +137,10 @@
                         "Erzählen Sie mehr über die Lebenslinien",
                         "Erzähl mir von meiner Lebensader",
                         "Erzählen Sie mehr über die Lebensader",
-                        "Erzählen Sie mehr über die Lebensader"
+                        "Verwenden Sie die Lebenslinie",
+                        "Verwenden Sie Lebenslinien",
+                        "benutze meine Lebenslinien",
+                        "benutze meine Lebenslinie"
                     ]
                 },
                 {
@@ -265,7 +270,10 @@
                         "{ProductName} Lebenslinie erhalten",
                         "bekommen {ProductName}",
                         "Holen Sie sich die {ProductName} Lebensader",
-                        "Holen Sie sich den {ProductName}"
+                        "Holen Sie sich den {ProductName}",
+                        "Verwenden Sie die {ProductName} Lebenslinie",
+                        "Verwenden Sie die {ProductName} Lebenslinie",
+                        "benutze {ProductName}"
                     ],
                     "slots": [{
                         "name": "ProductName",

@@ -13,7 +13,10 @@
                 },
                 {
                     "name": "AMAZON.StopIntent",
-                    "samples": []
+                    "samples": [
+                        "exit game",
+                        "exit"
+                    ]
                 },
                 {
                     "name": "QuizIntent",
@@ -126,6 +129,10 @@
                     "samples": [
                         "life line",
                         "life lines",
+                        "use life line",
+                        "use life lines",
+                        "use my life lines",
+                        "use my life line",
                         "my life lines",
                         "my life line",
                         "what are my life lines",
@@ -275,7 +282,10 @@
                       "get {ProductName} life line",
                       "get {ProductName}",
                       "get the {ProductName} life line",
-                      "get the {ProductName}"
+                      "get the {ProductName}",
+                      "use {ProductName} lifeline",
+                      "use {ProductName} life line",
+                      "use {ProductName}"
                     ],
                     "slots": [
                       {

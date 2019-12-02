@@ -169,6 +169,7 @@
                     "name": "ExpertReviewIntent",
                     "slots": [],
                     "samples": [
+                        "verwenden sie die rettungsleine",
                         "Verwenden Sie die Expert Review-Zeile",
                         "Verwenden Sie die Lebenslinie Expert Review",
                         "Verwenden Sie Expert Review",

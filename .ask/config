@@ -7,7 +7,7 @@
       "in_skill_products": [
         {
           "deploy_status": "Update",
-          "filePath": "isps/consumable/kidsspark.json",
+          "filePath": "isps/consumable/glide.json",
           "productId": "amzn1.adg.product.43e5df2b-48d5-42f1-9ead-f3f93e36a95e",
           "eTag": "19ddf2d399fed087525a0a0d828de386"
         }
@@ -37,7 +37,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-kidsspark-default",
             "handler": "index.handler",
-            "revisionId": "42be579a-03f9-4c3b-9d30-3598a8afc693",
+            "revisionId": "a4391b67-40d6-4b91-8d8b-721135f5df0e",
             "runtime": "nodejs8.10"
           }
         ]

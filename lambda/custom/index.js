@@ -733,7 +733,13 @@ const FallbackIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
     },
     handle(handlerInput) {
-        const speakOutput = handlerInput.t('FALLBACK_MSG');
+        let sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        let speakOutput = handlerInput.t('FALLBACK_MSG_QUESTION');
+        if(sessionAttributes.state == states.INPROGRESS) {
+            speakOutput = handlerInput.t('FALLBACK_MSG_ANSWER');
+        } else {
+            speakOutput = handlerInput.t('FALLBACK_MSG_QUESTION');
+        }
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
